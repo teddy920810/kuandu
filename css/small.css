@@ -1,0 +1,170 @@
+.section1 .values1 img{
+    width: 75vw;
+}
+.section2{
+    display: block;
+}
+.section2 .value{
+    width: 100%;
+    height: calc(100%/3);
+    margin: 0 0;
+
+}
+.wrap2-top{
+    width: 50%;
+    float: left;
+    height: 99%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wrap2-bot{
+    width: 50%;
+    height: 100%;
+    float: left;
+    margin-top: 0px;
+}
+.wrap2-bot img{
+    width: 100%;
+    height: 100%;
+}
+.product-nav{
+	display: none;
+}
+.pro-tab-con img{
+	display: none;
+}
+.padd-lr-40{
+	padding: 10px;
+}
+.product-logo img {
+    width: 20vw;
+}
+.btn-pre{
+	background: #c8c8c8;
+    padding: 8px 0;
+    box-sizing: border-box;
+    color: white;
+    margin-bottom: 10px;
+}
+.btn-next{
+	background: #bca474;
+    padding: 8px 0;
+    color: white;
+    box-sizing: border-box;
+}
+.pro-bot-icon img{
+	display: none;
+}
+.bot-code{
+	text-align: center!important;
+	margin-top: 20px;
+}
+.bot-font p{
+	text-align: center;
+}
+.pro-tab-ul p{
+	text-align: center;
+	margin: 12px 0 25px 0px;
+}
+.pro-tab-ul{
+	margin-left: 0px;
+}
+.pro-tab-ul ul li{
+	text-align: center;
+	margin: 2px 0;
+}
+.pro-tab-ul ul li a{
+	font-size: 14px;
+}
+.pro-tab-nr2{
+	padding: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	border: 1px solid #3e4a53;
+	margin-top: 10px;
+}
+.pro-tab-con a p{
+	margin-top: 0;
+}
+.pro-tab-nr .value {
+    padding-bottom: 10px;
+}
+
+.view .swiper-container { height: 210px !important;width: 100%; }
+.view .swiper-container img{width: 100%;}
+.preview .arrow {
+    position: absolute;
+    top: 50%;
+    margin-top: -38px;
+    width: 28px;
+    height: 28px;
+    z-index: 10;
+}
+.cul-banner-img{
+	width: 100%;
+    height: 180px;
+    background: url(../images/brand-banner.jpg) no-repeat -154px;
+    background-size: cover;
+    margin-top: -4px;
+    overflow: hidden;
+}
+.cul-part-img1 img{
+	width: 100%;
+}
+.mar-top-48{
+	margin-top: 10px;
+}
+.cul-p1 {
+	text-align: center;
+	width: 100%;
+	margin-left: 0;
+    letter-spacing: 4px;
+	padding-bottom: 20px;
+}
+.cul-h-img1 img {
+    width: 100%;
+    margin-top: 28px;
+}
+.cul-font2 {
+    letter-spacing: 3px;
+}
+.cul-h-img2 img{
+	margin-top: 60px;
+    width: 100%;
+}
+.cul-part2-img1{
+	height: auto;
+}
+.inst-pad-22 {
+    padding: 10px 15px;
+}
+.inst-pad-22 img{
+	display: none;
+}
+.inst-tit{
+	padding: 0 10px;
+	line-height: 30px;
+}
+.ins-con1-title img{
+	display: none;
+}
+.ins-cont1 {
+    width: 100%;
+    height:auto;
+    background: none!important;
+    background-size: cover;
+}
+.font-28{
+	font-size: 18px;
+}
+.font-16{
+	font-size: 8px;
+}
+.ins-con1-tit2 {
+	padding: 4px 0 0 10px;
+    box-sizing: border-box;
+}
+.ins-con1-tit2 i{
+	vertical-align: 10px;
+}
