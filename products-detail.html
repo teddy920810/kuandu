@@ -20,7 +20,6 @@
 		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 	</head>
 	<body style="margin: 0;">
-		<div id="app">
 		<!----------- 右上角导航开始 ------------>
 		<div class="nav-show">
 		    <a href="#" class="open-bot no-href" id="dh" title="展开导航">展开导航</a>
@@ -69,9 +68,10 @@
 			</div>
 		</div>
 		<div class="clearfix"></div>
+		<div id="app">
 		<div class="container mar-top-30">
 			<div class="row bg-gray">
-				<p class="col-sm-12">产品列表 - 套件系列</p>
+				<p class="col-sm-12">产品列表 - {{product.series.parent.name}} - {{product.series.name}}</p>
 			</div>
 			<div class="row mar-top-30">
 				<div class="col-sm-6 col-md-6 col-lg-6">
@@ -299,7 +299,8 @@
 						brief: '',
 						picUrl: '',
 						detail: '',
-						buyLink: ''
+						buyLink: '',
+						series:{ name: '',parent:{}}
 					},
 					footer: {
 						tel: '',
@@ -310,24 +311,33 @@
 				},
 				created () {
 					this.fetchFooter()
-					this.fetchProduct()
+					console.log(this.getQueryString("id"))
+                    this.fetchProduct(this.getQueryString("id"))
 				},
 				methods: {
-					fetchProduct () {
-						let url = "http://localhost:8080/kudo/product/1"
+					fetchProduct (id) {
+						let url = "http://localhost:8080/kudo/product/"+id
 						axios.get(url).then((response) => {
 							var jsonObject = response.data;
 							this.product = jsonObject.data
-							this.product.keywords = this.product.keywords.split(',')
 							console.log(this.product)
-						})
+						}).catch(function (error) {
+							console.log(error);
+						});
 					},
 					fetchFooter() {
 						let url = "http://localhost:8080/kudo/footer/"
 						axios.get(url).then((response) => {
 							var jsonObject = response.data;
 							this.footer = jsonObject.data
-						})
+						}).catch(function (error) {
+							console.log(error);
+						});
+					},
+					getQueryString(name) {
+						let reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+						let r = window.location.search.substr(1).match(reg);//search,查询？后面的参数，并匹配正则
+						if(r!=null)return  unescape(r[2]); return null;
 					}
 				}
 			})

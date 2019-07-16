@@ -13,6 +13,9 @@
 		<link rel="stylesheet" href="css/bootstrap.css"/>
 		<script src="js/modernizr.custom.js"></script>
 		<script src="js/classie.js"></script>
+		<!-- VUE -->
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 	</head>
 	<body style="margin: 0;">
 		<!----------- 右上角导航开始 ------------>
@@ -32,14 +35,13 @@
 		<div class="overlay overlay-scale">
 		    <button type="button" class="overlay-close">关闭</button>
 		    <nav>
-		        <ul> 
-		            <li><a href="index.html" target="_self">网站首页<br><span>HOME</span><div class="bj"></div></a></li>
-		            <li><a href="our-products.html" target="_self">产品列表<br><span>OUR PRODUCTS</span><div class="bj"></div></a></li>
-		            <li><a href="/nav/9.html" target="_self">品牌文化<br><span>BRAND CULTURE</span><div class="bj"></div></a></li>
-		            <li><a href="/nav/10.html" target="_self">企事业单位定制<br><span>ENTERPRISE CUSTOM</span><div class="bj"></div></a></li>
-		            <li><a href="/nav/11.html" target="_self">联系我们<br><span>CONTACT US</span><div class="bj"></div></a></li>
-		            
-		        </ul>
+				<ul>
+					<li><a href="index.html" target="_self">网站首页<br><span>HOME</span><div class="bj"></div></a></li>
+					<li><a href="our-products.html" target="_self">产品列表<br><span>OUR PRODUCTS</span><div class="bj"></div></a></li>
+					<li><a href="culture.html" target="_self">品牌文化<br><span>BRAND CULTURE</span><div class="bj"></div></a></li>
+					<li><a href="institution.html" target="_self">企事业单位定制<br><span>ENTERPRISE CUSTOM</span><div class="bj"></div></a></li>
+					<li><a href="contact.html" target="_self">联系我们<br><span>CONTACT US</span><div class="bj"></div></a></li>
+				</ul>
 		    </nav>
 		    <div class="hs-service-bg"></div>
 		</div>
@@ -56,26 +58,43 @@
 				<ul>
 					<li><a href="index.html">首页</a></li>
 					<li class="nav-li-hover"><a href="our-products.html">产品列表</a></li>
-					<li><a href="">品牌文化</a></li>
-					<li><a href="">企事业单位</a></li>
-					<li><a href="">联系我们</a></li>
+					<li><a href="culture.html">品牌文化</a></li>
+					<li><a href="institution.html">企事业单位</a></li>
+					<li><a href="contact.html">联系我们</a></li>
 				</ul>
 				<div class="clearfix"></div>
 			</div>
 		</div>
 		<div class="clearfix"></div>
+		<div id="app">
 		<div class="container mar-top-30 pro-tab-con">
 			<div class="row padd-lr-40">
-				<div class="col-sm-6 col-md-6 col-lg-6 text-center border-brown pro-tab-nr">
+				<div v-for="item in seriesList" key="item.id" v-if="item.id===currentSeries.id" class="col-sm-6 col-md-6 col-lg-6 text-center border-brown pro-tab-nr">
+					<div class="value">
+						<img :src="item.iconUrl" class="img-fluid" alt="Responsive image">
+					</div>
+					<div class="pro-tab-ul value">
+						<p class="font-18 color-brown">{{item.name}}</p>
+						<ul>
+							<li v-for="kids  in item.children"><a href="">{{kids.name}}</a></li>
+						</ul>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<a v-for="item in seriesList" key="item.id" v-if="item.id!==currentSeries.id" href="our-products2.html" class=" col-sm-3 col-md-3 col-lg-3 text-center pro-tab-nr2">
+					<img :src="item.iconUrl" class="img-fluid" alt="Responsive image">
+					<p>{{item.name}}</p>
+				</a>
+				<!--<div class="col-sm-6 col-md-6 col-lg-6 text-center border-brown pro-tab-nr">
 					<div class="value">
 						<img src="images/products-img1.png" class="img-fluid" alt="Responsive image">
 					</div>
 					<div class="pro-tab-ul value">
 						<p class="font-18 color-brown">床品系列</p>
 						<ul>
-							<li><a href="">套件系列</a></li>       
-							<li><a href="">枕芯系列</a></li>           
-							<li><a href="">被子系列</a></li>       
+							<li><a href="">套件系列</a></li>
+							<li><a href="">枕芯系列</a></li>
+							<li><a href="">被子系列</a></li>
 							<li><a href="">单品系列</a></li>
 						</ul>
 						<div class="clearfix"></div>
@@ -85,21 +104,22 @@
 					<img src="images/products-img2.png" class="img-fluid" alt="Responsive image">
 					<p>婚庆饰品</p>
 				</a>
+
 				<a href="our-products3.html" class=" col-sm-3 col-md-3 col-lg-3 text-center pro-tab-nr2">
 					<img src="images/products-img3.png" class="img-fluid" alt="Responsive image">
 					<p>家居饰品</p>
-				</a>
+				</a>-->
 			</div>
 			<div class="clearfix"></div>
 		</div>
 		<div class="container">
 			<!---------- 列表开始 ---------->
 			<div class="row">
-				<a href="products-detail.html" class="col-sm-6 col-md-4 col-lg-4 pro-w-con">
+				<a v-for="item in productList" :href="'products-detail.html?id='+item.id" class="col-sm-6 col-md-4 col-lg-4 pro-w-con">
 					<div class="pro-w-wrapper">
-            <img src="images/pro-img.png" />
-            <p class="pro-w-bg">Pimperne 紫繁篓纯棉四件套</p>
-          </div>
+					<img :src="item.picUrl" />
+					<p class="pro-w-bg">{{item.name}}</p>
+				  </div>
 				</a>
 				<a class="col-sm-6 col-md-4 col-lg-4 pro-w-con">
 					<div class="pro-w-wrapper">
@@ -198,7 +218,7 @@
 				</div>
 			</div>
 		</div>
-		
+		</div>
 		<script type="text/javascript">
 			(function() {
 				var triggerBttn = document.getElementById('dh'),
@@ -215,7 +235,7 @@
 					support = {
 						transitions: Modernizr.csstransitions
 					};
-		
+
 				function toggleOverlay() {
 					if (classie.has(overlay, 'open')) {
 						classie.remove(overlay, 'open');
@@ -236,12 +256,63 @@
 						classie.add(overlay, 'open');
 					}
 				}
-		
+
 				triggerBttn.addEventListener('click', toggleOverlay);
 				closeBttn.addEventListener('click', toggleOverlay);
 			})();
-		
+
 		</script>
-		
+
+		<script>
+			var app = new Vue({
+				el: '#app',
+				data: {
+					page:1,
+					limit:10,
+					pages:1,
+					total:0,
+					productList: [],
+					seriesList:[],
+					currentSeries: {},
+					footer: {
+						tel: '',
+						email: '',
+						address: '',
+						qrCode: ''
+					}
+				},
+				created () {
+					this.fetchFooter()
+					this.fetchList()
+				},
+				methods: {
+					fetchList () {
+						let url = "http://localhost:8080/kudo/product/"
+						axios.get(url).then((response) => {
+							var jsonObject = response.data;
+						this.productList = jsonObject.data.productList
+						this.seriesList = jsonObject.data.seriesList
+						this.currentSeries = jsonObject.data.currentSeries
+						this.page = jsonObject.data.page
+						this.limit = jsonObject.data.limit
+						this.pages = jsonObject.data.pages
+						this.total = jsonObject.data.total
+						console.log(this.seriesList,this.productList)
+					}).catch(function (error) {
+							console.log(error);
+						});
+					},
+					fetchFooter() {
+						let url = "http://localhost:8080/kudo/footer/"
+						axios.get(url).then((response) => {
+							var jsonObject = response.data;
+						this.footer = jsonObject.data
+					}).catch(function (error) {
+							console.log(error);
+						});
+					}
+				}
+			})
+		</script>
 	</body>
 </html>
