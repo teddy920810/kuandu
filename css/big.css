@@ -1,3 +1,21 @@
 .section1 .values1 img{
     width: 25vw;
 }
+.wrap3-img1 img {
+    width: 100%;
+}
+.wrap2-top .icon {
+    margin-top: 60px;
+}
+.index-p3-ul {
+    margin-top: 1vw;
+}
+.index-p3-ul li{
+    margin-top: 2vw;
+}
+.wrap2-top .index-p3-ul{
+    display: none;
+}
+.busi-after .icon {
+    margin-top: 60px;
+}

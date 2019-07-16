@@ -2,24 +2,26 @@
 <html lang="zh-CN">
 <head>
 	<meta charset="utf-8">
-	<title>首页</title>
-	<link rel="stylesheet" href="css/jquery.fullPage.css">
-	<link rel="stylesheet" href="css/animate.min.css" />
-	<script src="js/jquery-1.8.3.min.js"></script>
-	<script src="js/jquery.fullPage.min.js"></script>
-	<script src="js/jquery.parallax.min.js"></script>
 	<meta name="viewport" content="width=320,maximum-scale=1.3,user-scalable=no">
+	<title>首页</title>
 	<link rel="stylesheet" href="css/normal.css" />
 	<link rel="stylesheet" type="text/css" href="css/small.css" media="screen and (max-width:319px)"/>
 	<link rel="stylesheet" type="text/css" href="css/small.css" media="screen and (min-width:320px) and (max-width:767px)"/>
 	<link rel="stylesheet" type="text/css" href="css/medium.css"   media="screen and (min-width:768px) and (max-width:1023px)"/>
 	<link rel="stylesheet" type="text/css" href="css/big.css"  media="screen and (min-width:1024px)"/>
-    <link rel="stylesheet" type="text/css" href="css/dh.css"/>
-    <link rel="stylesheet" type="text/css" href="css/nav.css"/>
-    <link rel="stylesheet" type="text/css" href="css/main.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet"> 
-    <script src="js/modernizr.custom.js"></script>
-    <script src="js/classie.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/dh.css"/>
+	<link rel="stylesheet" type="text/css" href="css/nav.css"/>
+	<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+	<link rel="stylesheet" href="css/bootstrap.css"/>
+	<link rel="stylesheet" href="css/animate.min.css" />
+	<link rel="stylesheet" href="css/fullpage-3.0.7.css" />
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script src="js/fullpage-3.0.7.js"></script>
+	<!--<script src="js/fullpage.extensions-3.0.7.min.js"></script>-->
+	<script src="js/jquery.parallax.min.js"></script>
+  	<script src="js/modernizr.custom.js"></script>
+  	<script src="js/classie.js"></script>
 </head>
 <body>
 	<!----------- 右上角导航开始 ------------>
@@ -39,122 +41,140 @@
 	<div class="overlay overlay-scale">
 	    <button type="button" class="overlay-close">关闭</button>
 	    <nav>
-	        <ul> 
-	            <li><a href="index.html" target="_self">网站首页<br><span>HOME</span><div class="bj"></div></a></li>
-	            <li><a href="our-products.html" target="_self">产品列表<br><span>OUR PRODUCTS</span><div class="bj"></div></a></li>
-	            <li><a href="/nav/9.html" target="_self">品牌文化<br><span>BRAND CULTURE</span><div class="bj"></div></a></li>
-	            <li><a href="/nav/10.html" target="_self">企事业单位定制<br><span>ENTERPRISE CUSTOM</span><div class="bj"></div></a></li>
-	            <li><a href="/nav/11.html" target="_self">联系我们<br><span>CONTACT US</span><div class="bj"></div></a></li>
-	            
-	        </ul>
+			<ul>
+				<li><a href="index.html" target="_self">网站首页<br><span>HOME</span><div class="bj"></div></a></li>
+				<li><a href="our-products.html" target="_self">产品列表<br><span>OUR PRODUCTS</span><div class="bj"></div></a></li>
+				<li><a href="culture.html" target="_self">品牌文化<br><span>BRAND CULTURE</span><div class="bj"></div></a></li>
+				<li><a href="institution.html" target="_self">企事业单位定制<br><span>ENTERPRISE CUSTOM</span><div class="bj"></div></a></li>
+				<li><a href="contact.html" target="_self">联系我们<br><span>CONTACT US</span><div class="bj"></div></a></li>
+			</ul>
 	    </nav>
 	    <div class="hs-service-bg"></div>
 	</div>
 	<!----------- 右上角导航结束 ------------>
-<div id="fullpage">
-	<!------------------第一屏  开始--------------------------->
-	<div class="section section1">
-		<p class="values1">
-			<img src="images/index-img.png">
-		</p>
-		
-	</div>
-	<!------------------第一屏  结束--------------------------->
-	<!------------------第二屏  开始--------------------------->
-	<div class="section section2 re">
-		<div class="value">
-            <div style="position: relative;">
-                <div class="wrap2-top busi-for list flip in">
-                	<div class="value1">
-                		<div class="title">
-                			<img src="images/page2-tit1.png" />
-                		</div>
-                		<div class="icon">
-                			<img src="images/img2-icon1.png" />
-                		</div>
-                	</div>
-                </div>
-                <div class="busi-after busi-after2 list flip out" style="background: #bfa56d;width: 100%;height: 376px;padding-top: 50px;    box-sizing: border-box;">
-                    <div class="title">
-                    	<img src="images/page2-tit1-hover.png" />
-                    </div>
-                    <ul class="index-p3-ul">
-                        <li style="text-align: center;">
-                            <p><img src="images/icon1-li1.png"/></p>
-                            <span>套件系列</span>
-                        </li>
-                         <li style="text-align: center;">
-                            <p><img src="images/icon1-li2.png"/></p>
-                            <span>套件系列</span>
-                        </li>
-                         <li style="text-align: center;">
-                            <p><img src="images/icon1-li3.png"/></p>
-                            <span>套件系列</span>
-                        </li>
-                         <li style="text-align: center;">
-                            <p><img src="images/icon1-li4.png"/></p>
-                            <span>套件系列</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="wrap2-bot" style="position: relative;top: 377px;">
-				<img src="images/img2-bot1.png" />
-			</div>
+	<div id="fullpage">
+		<!------------------第一屏 --------------------------->
+		<div class="section section1">
+			<p class="values1">
+				<img src="images/index-img.png">
+			</p>
 		</div>
-		<div class="value">
-		    <div style="position: relative;">
-		        <div class="wrap2-top busi-for list flip in">
-		        	<div class="value1">
-		        		<div class="title">
-		        			<img src="images/page2-tit2.png" />
-		        		</div>
-		        		<div class="icon">
-		        			<img src="images/img2-icon2.png" />
-		        		</div>
-		        	</div>
-		        </div>
-		        <div class="busi-after busi-after2 list flip out" style="background: #bfa56d;width: 100%;height: 376px;padding-top: 50px;    box-sizing: border-box;">
-		            <div class="title">
-		            	<img src="images/page2-tit2-hover.png" />
-		            </div>
-		            <ul class="index-p3-ul">
-		                <li style="text-align: center;">
-		                    <p><img src="images/icon1-li1.png"/></p>
-		                    <span>套件系列</span>
-		                </li>
-		                 <li style="text-align: center;">
-		                    <p><img src="images/icon1-li2.png"/></p>
-		                    <span>套件系列</span>
-		                </li>
-		                 <li style="text-align: center;">
-		                    <p><img src="images/icon1-li3.png"/></p>
-		                    <span>套件系列</span>
-		                </li>
-		                 <li style="text-align: center;">
-		                    <p><img src="images/icon1-li4.png"/></p>
-		                    <span>套件系列</span>
-		                </li>
-		            </ul>
-		        </div>
-		    </div>
-		    <div class="wrap2-bot" style="position: relative;top: 377px;">
-				<img src="images/img2-bot1.png" />
+		<!------------------第二屏 --------------------------->
+		<div class="section section2 re">
+			<div class="value">
+				<div class="wrap2-h">
+					<div id="front_1" class="wrap2-top busi-for list flip" style="z-index: 101">
+						<div class="value1">
+							<div class="title">
+								<img src="images/page2-tit1.png" />
+							</div>
+							<div class="icon">
+								<img src="images/img2-icon1.png" />
+							</div>
+						</div>
+				  		<ul class="index-p3-ul">
+						  <li style="text-align: center;">
+							  <p><img src="images/icon1-li1.png"/></p>
+							  <span>套件系列</span>
+						  </li>
+						   <li style="text-align: center;">
+							  <p><img src="images/icon1-li2.png"/></p>
+							  <span>套件系列</span>
+						  </li>
+						   <li style="text-align: center;">
+							  <p><img src="images/icon1-li3.png"/></p>
+							  <span>套件系列</span>
+						  </li>
+						   <li style="text-align: center;">
+							  <p><img src="images/icon1-li4.png"/></p>
+							  <span>套件系列</span>
+						  </li>
+				  		</ul>
+					</div>
+					<div class="busi-after busi-after2 list flip" style="z-index: 100">
+						<div class="title">
+							<img src="images/page2-tit1-hover.png" />
+						</div>
+						<ul class="index-p3-ul">
+							<li style="text-align: center;">
+								<p><img src="images/icon1-li1.png"/></p>
+								<span>套件系列</span>
+							</li>
+							 <li style="text-align: center;">
+								<p><img src="images/icon1-li2.png"/></p>
+								<span>套件系列</span>
+							</li>
+							 <li style="text-align: center;">
+								<p><img src="images/icon1-li3.png"/></p>
+								<span>套件系列</span>
+							</li>
+							 <li style="text-align: center;">
+								<p><img src="images/icon1-li4.png"/></p>
+								<span>套件系列</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="wrap2-bot" style="position: relative;">
+					<img src="images/img2-bot1.png" />
+				</div>
 			</div>
-		</div>
-		<div class="value">
-		    <div style="position: relative;">
-		        <div class="wrap2-top busi-for list flip in">
-		        	<div class="value1">
-		        		<div class="title">
-		        			<img src="images/page2-tit3.png" />
-		        		</div>
+			<div class="value">
+				<div class="wrap2-h">
+				<div id="front_2"  class="wrap2-top busi-for wrap2-top list" style="z-index: 101">
+					<div class="value1">
+						<div class="title">
+							<img src="images/page2-tit2.png" />
+						</div>
+						<div class="icon icon2">
+							<img src="images/img2-icon2.png" />
+						</div>
+					</div>
+				</div>
+			   <div class="busi-after busi-after2 list flip" style="z-index: 100">
+					<div class="title">
+						<img src="images/page2-tit2-hover.png" />
+					</div>
+					<div class="icon icon2">
+						<img src="images/img2-icon2-hover.png" />
+					</div>
+				</div>
+			</div>
+				<div class="wrap2-bot" style="position: relative;">
+				<img src="images/img2-bot2.png" />
+			</div>
+			</div>
+			<div class="value">
+		    	<div class="wrap2-h">
+		        	<div id="front_3" class="wrap2-top busi-for list flip" style="z-index: 101">
+		        		<div class="value1">
+							<div class="title">
+								<img src="images/page2-tit3.png" />
+							</div>
 		        		<div class="icon">
 		        			<img src="images/img2-icon3.png" />
 		        		</div>
 		        	</div>
+              		<ul class="index-p3-ul">
+                  		<li style="text-align: center;">
+						  <p><img src="images/icon1-li1.png"/></p>
+						  <span>套件系列</span>
+					    </li>
+					   <li style="text-align: center;">
+						  <p><img src="images/icon1-li2.png"/></p>
+						  <span>套件系列</span>
+					   </li>
+					   <li style="text-align: center;">
+						  <p><img src="images/icon1-li3.png"/></p>
+						  <span>套件系列</span>
+					   </li>
+					   <li style="text-align: center;">
+						  <p><img src="images/icon1-li4.png"/></p>
+						  <span>套件系列</span>
+					   </li>
+              		</ul>
 		        </div>
-		        <div class="busi-after busi-after2 list flip out" style="background: #bfa56d;width: 100%;height: 376px;padding-top: 50px;    box-sizing: border-box;">
+		        <div class="busi-after busi-after2 list flip" style="z-index: 100">
 		            <div class="title">
 		            	<img src="images/page2-tit3-hover.png" />
 		            </div>
@@ -177,67 +197,79 @@
 		                </li>
 		            </ul>
 		        </div>
-		    </div>
-		    <div class="wrap2-bot" style="position: relative;top: 377px;">
-				<img src="images/img2-bot1.png" />
+			 </div>
+				<div class="wrap2-bot" style="position: relative;">
+					<img src="images/img2-bot3.png" />
+				</div>
 			</div>
 		</div>
-	</div>
 	<!------------------第二屏  结束--------------------------->
 	<!------------------第三屏  开始--------------------------->
 	<div class="section section3">
+    <div class="wrap3-img1">
+    	<img src="images/sec3-img.png" />
+    </div>
+    <div class="wrap3-img2">
+    	<img src="images/sec3-img1.png" />
+    </div>
 		<ul id="scene" class="scene">
-			<li class="layer job-txt" data-depth="0.10">
-				<img src="images/sec3-img.png" />
-			</li>
-			<li class="layer scene-circle" data-depth="0.30"></li>
 			<li class="layer scene-bg" data-depth="0.80"></li>
 		</ul>
-
 	</div>
 	<!------------------第三屏  结束--------------------------->
 	<!------------------第四屏  开始--------------------------->
 	<div class="section section4">
-		<div class="sec4-con">
-			<img src="images/sec4-tit.png" />
-			<div class="sec4-con-big">
-				<div class="sec4-list">
-					<ul>
-						<li class="mar-top-115">
-							<img src="images/sec4-left-tit1-hover.png" />
-						</li>
-						<li>
-							<img src="images/sec4-left-tit2.png" />
-						</li>
-						<li>
-							<img src="images/sec4-left-tit3.png" />
-						</li>
-					</ul>
-				</div>
-				<div class="sec4-img sec4-img1"></div>
+		<div class="sec4-con container">
+        <p class="sec4-p">
+          <img src="images/sec4-tit.png" />
+        </p>
+        <div class="sec4-lunbo mar-top-30">
+          <div class="brt-works-container sec4-img sec4-img1 mar-top-20">
+               <div class="brt-works-wrapper">
+                   <div class="slide">
+                       <img src="images/sec4-img.jpg" />
+                   </div>
+                   <div class="slide">
+                       <img src="images/sec4-img2.jpg" />
+                   </div>
+                   <div class="slide">
+                       <img src="images/sec4-img3.jpg" />
+                   </div>
+               </div>
+           </div>
+           <!-- Add Pagination -->
+           <ul class="brt-works-pagination sec4-page">
+			   <li class="service-item service-item2 " onclick="slidePageClick(0)"><img src="images/sec4-left-tit1-hover.png" /></li>
+			   <li class="service-item service-item6 " onclick="slidePageClick(1)"><img src="images/sec4-left-tit2-hover.png" /></li>
+			   <li class="service-item service-item1 " onclick="slidePageClick(2)"><img src="images/sec4-tit3-hover.png" /></li>
+           </ul>
+        </div>
+        <div class="clearfix"></div>
+
 			</div>
+
 		</div>
-	</div>
+
 	<!------------------第四屏  结束--------------------------->
 	<!------------------第五屏  开始--------------------------->
 	<div class="section section5">
-		<div class="sec5-wrapper">
-			<div class="sec5-con">
-				<div class="sec5-icon">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4 col-md-4 col-lg-4 sec5-icon">
 					<div class="sec5-img">
 						<img src="images/sec5-icon1.png" />
 					</div>
 					<p class="p1">联系电话</p>
 					<p class="p2">400-160-1988</p>
 				</div>
-				<div class="sec5-icon">
+				<div class="col-sm-4 col-md-4 col-lg-4 sec5-icon">
 					<div class="sec5-img">
 						<img src="images/sec5-icon2.png" />
 					</div>
 					<p class="p1">电子邮箱</p>
 					<p class="p2">459071876@gmail</p>
 				</div>
-				<div class="sec5-icon">
+				<div class="col-sm-4 col-md-4 col-lg-4 sec5-icon">
 					<div class="sec5-img">
 						<img src="images/sec5-icon3.png" />
 					</div>
@@ -245,23 +277,25 @@
 					<p class="p2">400-160-1988</p>
 				</div>
 			</div>
-			<div class="sec5-code">
+			<div class="row sec5-code2">
 				<img src="images/sec5-code.png"/>
-				<p class="width-300">
-					详细服务及报价，请扫二维码加入我们的微信服务号进行咨询
-				</p>
 			</div>
+      <div class="row">
+        <p class="width-300 mar-top-20">
+        	详细服务及报价，请扫二维码加入我们的微信服务号进行咨询
+        </p>
+      </div>
 		</div>
 
 	</div>
+	</div>
 	<!------------------第五屏  结束--------------------------->
-
 <script type="text/javascript">
 	(function() {
 		var triggerBttn = document.getElementById('dh'),
 			overlay = document.querySelector('div.overlay'),
 			closeBttn = overlay.querySelector('button.overlay-close');
-		transEndEventNames = {
+			transEndEventNames = {
 				'WebkitTransition': 'webkitTransitionEnd',
 				'MozTransition': 'transitionend',
 				'OTransition': 'oTransitionEnd',
@@ -293,61 +327,52 @@
 				classie.add(overlay, 'open');
 			}
 		}
-
 		triggerBttn.addEventListener('click', toggleOverlay);
 		closeBttn.addEventListener('click', toggleOverlay);
 	})();
-
 </script>
 <script>
-$(function(){
-    /*-----------------纸牌翻转效果-----------------*/
-    $(".busi-for").mouseover(function () {
-//               $(this).removeClass("in").addClass("out");
-//               $(this).next().addClass("in").removeClass("out");
-                 
-    }).mouseleave(function () {
-//               $(this).removeClass("out").addClass("in");
-//               $(this).next().addClass("out").removeClass("in");
-    });
-    
-    
-	$('#fullpage').fullpage({
-		navigation           :true,                            //圆点导航
-		navigationPosition   :'right',                        //圆点导航位置left or right
-		navigationTooltips   :['网址首页','产品信息','品牌文化','单位定制','联系我们'],    //圆点导航提示信息
-		showActiveTooltip    :true,                            //圆点导航提示信息是否显示
-		anchors              :['page1','page2','page3','page4','page5','page6'],    //设置锚点
-		menu                 :'.header',                        //导航  menu：绑定菜单，设定相关属性与anchors的值相对应后，菜单可以控制滚动，默认为false；
-		verticalCentered     :false,                        //设置元素是否垂直居中
-		scrollingSpeed       :1000,                            //设置切屏速度
-		afterRender:function () {
-			$('.one .values1').addClass('animated slideInLeft')
-		},
-		onLeave:function (index,nextIndex,direction) {
-			if(index==1&&nextIndex==2){
-				$('.section1 .values1').removeClass('animated slideInLeft')
-			}
-		}
+	$(function(){
+		$('#fullpage').fullpage({
+			navigation           :true,                            //圆点导航
+			navigationPosition   :'right',                        //圆点导航位置left or right
+			navigationTooltips   :['网址首页','产品信息','品牌文化','单位定制','联系我们'],    //圆点导航提示信息
+			//showActiveTooltip    :true,                            //圆点导航提示信息是否显示
+			anchors              :['page1','page2','page3','page4','page5','page6'],    //设置锚点
+			menu                 :'.header',                        //导航  menu：绑定菜单，设定相关属性与anchors的值相对应后，菜单可以控制滚动，默认为false；
+			verticalCentered     :false,                        //设置元素是否垂直居中
+			slidesNavPosition: 'bottom',
+			onSlideLeave: function(section, origin, destination, direction){
+				var SlideIndex = destination.index
+				$(".sec4-page li").removeClass("hehe")
+				$(".sec4-page li:eq("+SlideIndex+")").addClass("hehe")
+
+			},
+			licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE'
+		});
+		$('#scene').parallax();
+
+
+		$("#front_1").on("mouseenter","div",function(e){
+			$("#front_1").hide()
+			$("#front_2").show()
+			$("#front_3").show()
+		})
+		$("#front_2").on("mouseenter","div",function(e){
+			$("#front_1").show()
+			$("#front_2").hide()
+			$("#front_3").show()
+		})
+		$("#front_3").on("mouseenter","div",function(e){
+			$("#front_1").show()
+			$("#front_2").show()
+			$("#front_3").hide()
+		})
+
 	});
-// 	$(window).resize(function(){
-// 		autoScrolling();
-// 	});
-
-//	function autoScrolling(){
-//		var $ww = $(window).width();
-//		if($ww < 1024){
-//			$.fn.fullpage.setAutoScrolling(false);
-//		} else {
-//			$.fn.fullpage.setAutoScrolling(true);
-//		}
-//	}
-//
-//	autoScrolling();
-
-	$('#scene').parallax();
-});
-
+	function slidePageClick(index){
+		$.fn.fullpage.moveTo(4, index)
+	}
 </script>
 </body>
 </html>

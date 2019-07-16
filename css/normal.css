@@ -85,20 +85,56 @@ ul, menu, dir {
     justify-content: flex-start;
     margin:0 20px;
     width: 388px;
-    height: 725px;
+    /* height: 725px; */
 }
 .wrap2-top{
     width: 100%;
-    height: 376px;
+    height: 100%;
     background: #f2f2f3;
-    padding-top: 50px;
+    padding-top: 3vw;
     box-sizing: border-box;
 }
+.wrap2-top:hover{
+  background: #fffafa;
+}
 .wrap2-top .icon{
-    margin-top: 60px;
+    /* margin-top: 60px; */
 }
 .wrap2-bot{
-    margin-top: 38px;
+    margin-top: 10px;
+}
+.busi-after{
+	height:3vw;
+	background: #bfa56d;
+	width: 100%;
+	padding-top: 3vw;    
+	box-sizing: border-box;
+}
+.wrap2-h{
+	position: relative;
+	height: 20vw;
+}
+.wrap3-con{
+	width: 1300px;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+}
+.wrap3-img1{
+	position: absolute;
+	left: 70%;
+	margin-left: -350px;
+	z-index: 999;
+}
+.wrap3-img1 img{
+	width: 80%;
+}
+.wrap3-img2{
+	position: absolute;
+	top: 0;
+	left: 24%;
+	margin-left: -200px;
+	z-index: 999;
 }
 .section3{
     background: #7e8b99;
@@ -120,6 +156,9 @@ ul, menu, dir {
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
     box-sizing: content-box;
+	display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .scene li {
     width: 100%;
@@ -178,7 +217,7 @@ ul, menu, dir {
 }
 .sec4-con{
     width: 1200px;
-    height: 690px;
+    height: 36vw;
     position: relative;
 }
 .sec4-list{
@@ -209,13 +248,15 @@ ul li{
 .sec4-img{
     width: 902px;
     height: 552px;
-    position: absolute;
+    position: absolute !important;
     right: 0;
     z-index: 1;
 }
 .sec4-img1{
-    background: url("../images/sec4-img.jpg");
     background-size: cover;
+}
+.sec4-lunbo{
+  position: relative;
 }
 .section5{
     background: url("../images/sec5-bg.jpg");
@@ -223,6 +264,19 @@ ul li{
     display: flex;
     align-items: center;
     vertical-align: center;
+}
+.sec4-page{
+  width:342px !important;
+  height:436px;
+  background: url(../images/sec4-tit3.png);
+  left: 0;
+  top: 6vw;
+  padding-top: 9vw;
+  box-sizing: border-box;
+}
+.sec4-page li{
+  width: 100%;
+  margin-top: 0vw;
 }
 .sec5-con{
     display: flex;
@@ -249,14 +303,20 @@ ul li{
 .sec5-icon .p1{
     font-size: 18px;
     margin: 20px 0;
+    color: white;
 }
 .sec5-icon .p2{
     font-size: 36px;
     font-weight: lighter;
+    color: white;
 }
 .sec5-code{
     flex-flow: wrap;
     margin-top: 80px;
+}
+.sec5-code2 img{
+  margin: 0 auto;
+  margin-top: 40px;
 }
 .width-300{
     text-align: center;
@@ -324,13 +384,13 @@ ul li{
     position: relative;
 }
 .index-p3-ul{
-    margin-top: 20px;
+    margin-top: -1vw;
 }
 .index-p3-ul li{
     width: 50%;
     font-size: 14px;
     float: left;
-    margin-top: 30px;
+    margin-top: 1vw;
     color: #846b34;
 }
 
@@ -447,7 +507,8 @@ a:hover{
 	margin-top: 30px;
 }
 .border-brown{
-	border: 1px solid #d4c3a0;
+	border: 1px solid #d4c3a0 !important;
+  color: #997d44 !important;
 }
 .padd-lr-40{
 	padding: 0 150px;
@@ -481,6 +542,19 @@ a:hover{
 	bottom:0;
 	overflow: hidden;
 	margin-top: 30px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.pro-w-wrapper{
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+.pro-w-con img{
+  transition: all 0.6s;
+}
+.pro-w-con img:hover{
+  transform: scale(1.4);
 }
 .pro-w-bg{
 	position: absolute;

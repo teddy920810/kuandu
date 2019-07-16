@@ -434,21 +434,23 @@
 /*
 纸牌翻转效果*/
 .in {
-    -webkit-animation-timing-function: ease-out;
+    /* -webkit-animation-timing-function: ease-out;
     -webkit-animation-duration: 350ms;
     animation-timing-function: ease-out;
-    animation-duration: 350ms;
+    animation-duration: 350ms; */
+	display: block;
 }
 .out {
-    -webkit-animation-timing-function: ease-in;
+  /*  -webkit-animation-timing-function: ease-in;
     -webkit-animation-duration: 225ms;
     animation-timing-function: ease-in;
-    animation-duration: 225ms;
+    animation-duration: 225ms; */
+	display: none;
 }
 .viewport-flip {
-    -webkit-perspective: 1000px;
+    /* -webkit-perspective: 1000px;
     perspective: 1000px;
-    position: absolute;
+    position: absolute; */
 }
 /* .flip {
     -webkit-backface-visibility: hidden;
@@ -530,14 +532,14 @@
     width: 100%;
     height: 100%;
     color: white;
-    background: url("../img/busi-scope-img1-hover.png");
+    background: #bfa56d;
 }
 .busi-after hr{
     background-color: #ffffff;
     margin-top: 20px;
 }
 .busi-after2{
-    background: url("../img/busi-scope-img2-hover.png");
+    
 }
 .busi-after3{
     background: url("../img/busi-scope-img3-hover.png");

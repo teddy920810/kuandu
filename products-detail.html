@@ -15,8 +15,12 @@
 		<script src="js/swiper.min.js"></script>
 		<script src="js/modernizr.custom.js"></script>
 		<script src="js/classie.js"></script>
+		<!-- VUE -->
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 	</head>
 	<body style="margin: 0;">
+		<div id="app">
 		<!----------- 右上角导航开始 ------------>
 		<div class="nav-show">
 		    <a href="#" class="open-bot no-href" id="dh" title="展开导航">展开导航</a>
@@ -32,18 +36,17 @@
 		</div>
 		<!-- 导航 -->
 		<div class="overlay overlay-scale">
-		    <button type="button" class="overlay-close">关闭</button>
-		    <nav>
-		        <ul> 
-		            <li><a href="index.html" target="_self">网站首页<br><span>HOME</span><div class="bj"></div></a></li>
-		            <li><a href="our-products.html" target="_self">产品列表<br><span>OUR PRODUCTS</span><div class="bj"></div></a></li>
-		            <li><a href="/nav/9.html" target="_self">品牌文化<br><span>BRAND CULTURE</span><div class="bj"></div></a></li>
-		            <li><a href="/nav/10.html" target="_self">企事业单位定制<br><span>ENTERPRISE CUSTOM</span><div class="bj"></div></a></li>
-		            <li><a href="/nav/11.html" target="_self">联系我们<br><span>CONTACT US</span><div class="bj"></div></a></li>
-		            
-		        </ul>
-		    </nav>
-		    <div class="hs-service-bg"></div>
+			<button type="button" class="overlay-close">关闭</button>
+			<nav>
+				<ul>
+					<li><a href="index.html" target="_self">网站首页<br><span>HOME</span><div class="bj"></div></a></li>
+					<li><a href="our-products.html" target="_self">产品列表<br><span>OUR PRODUCTS</span><div class="bj"></div></a></li>
+					<li><a href="culture.html" target="_self">品牌文化<br><span>BRAND CULTURE</span><div class="bj"></div></a></li>
+					<li><a href="institution.html" target="_self">企事业单位定制<br><span>ENTERPRISE CUSTOM</span><div class="bj"></div></a></li>
+					<li><a href="contact.html" target="_self">联系我们<br><span>CONTACT US</span><div class="bj"></div></a></li>
+				</ul>
+			</nav>
+			<div class="hs-service-bg"></div>
 		</div>
 		<!----------- 右上角导航结束 ------------>
 		<!-------------- logo开始 ------------------>
@@ -58,9 +61,9 @@
 				<ul>
 					<li><a href="index.html">首页</a></li>
 					<li class="nav-li-hover"><a href="our-products.html">产品列表</a></li>
-					<li><a href="">品牌文化</a></li>
-					<li><a href="">企事业单位</a></li>
-					<li><a href="">联系我们</a></li>
+					<li><a href="culture.html">品牌文化</a></li>
+					<li><a href="institution.html">企事业单位</a></li>
+					<li><a href="contact.html">联系我们</a></li>
 				</ul>
 				<div class="clearfix"></div>
 			</div>
@@ -78,20 +81,8 @@
 								<a class="arrow arrow-left" href="#"></a>
 								<a class="arrow arrow-right" href="#"></a>
 								<div class="swiper-wrapper">
-									<div class="swiper-slide">
-										<a target="_blank"><img src="images/detail-img1.png" alt=""></a>
-									</div>
-									<div class="swiper-slide">
-										<a target="_blank"><img src="images/detail-img2.png" alt=""></a>
-									</div>
-									<div class="swiper-slide">
-										<a target="_blank"><img src="images/detail-img1.png" alt=""></a>
-									</div>
-									<div class="swiper-slide">
-										<a target="_blank"><img src="images/detail-img2.png" alt=""></a>
-									</div>
-									<div class="swiper-slide">
-										<a target="_blank"><img src="images/detail-img1.png" alt=""></a>
+									<div class="swiper-slide" v-for="item in product.gallery" key="item">
+										<a target="_blank"><img :src="item" alt=""></a>
 									</div>
 								</div>
 							</div>
@@ -128,68 +119,33 @@
 							<div class="e_box ">
 								<h1 class="d_Title">
 									<div class="font-24">
-										Strawberry thief Red 红色草莓小偷纯棉四件套
+										{{ product.name }}
 									</div>
 								</h1>
 							</div>
 							<div class="xiangxi">
 								<div class="reset_style">
-									<div class="e_box">
-										<div class="e_box ">
-											<div class="e_title">
-												<i class="font">零售价</i>
-												<i class="font font-24">6680.00</i>
-												<i class="font">元</i>
-											</div>
-										</div>
-										<div class="e_box ">
-											<div class="e_title">
-												<div class="e_title">
-													<i class="font">市场价</i>
-													<i class="font">8680.00</i>
-													<i class="font">元</i>
-												</div>
-											</div>
-										</div>
-									</div>
 									<div>
-										The eye catching Strawberry Thief is one of William Morris’ most iconic designs. He was inspired to create the original fabric after watching thrushes stealing strawberries from the kitchen garden of his countryside home in Oxfordshire. This enduringly elegant design has been re-coloured in a striking red colourway for this beautiful bedroom range.  
-									</div>
-									<div>
-										“草莓小偷”是威廉.莫里斯最著名的设计之一。其设计灵感源于莫里斯在乡下小屋居住时，看到画眉鸟们偷偷采摘院子里的草莓，顿时被那鲜活的场景所打动，于是创作了这幅经典的作品。这个经典持久的设计采用了让人惊艳的红色，成就了本款美丽的床品。
+										{{product.brief}}
 									</div>
 									<div>
 										<ul style="list-style-type: disc;">
-											
-											<li>
-												色牢度好， 手感柔软,可以常洗不褪色,久用如新。</li>
-											<li>
-												E+F后整理的工艺， 具有超级柔光、 柔软的效果， 对光线反射一致， 显现出丝缎般的光泽。</li>
-											<li>
-												材质：100%棉</li>
-											<li>
-												1.5m床被套规格：200cm×230cm床单：250*240cm</li>
-											<li>
-												1.8m床被套规格：220cm×240cm床单：270*240cm</li>
-											<li>
-												枕套规格：48cm×74cm/只，共2只</li>
+											<li v-for="item in product.keywords" key="item">{{ item }}</li>
 										</ul>
 									</div>
 								</div>
 							</div>
-							<a class="lianxi" href="/nav/12.html">联系我们</a>
-							
-							
+							<a class="lianxi" :href="product.buyLink">去购买</a>
 						</div>
 					</div>
-				</div> 
-				<!-- 右边结束 -->				
+				</div>
+				<!-- 右边结束 -->
 			</div>
 			<div class="row des-img">
-				<img src="images/des-img-con.jpg" />
+				<div v-html="product.detail"></div>
 			</div>
 		</div>
-		
+
 		<!---------- 底部 -------------->
 		<div class="pro-bottom width-100">
 			<div class="container">
@@ -200,7 +156,7 @@
 						</div>
 						<div class="bot-font value">
 							<p class="font-14">联系电话</p>
-							<div class="font-24">400-160-1988</div>
+							<div class="font-24">{{ footer.tel }}</div>
 						</div>
 					</div>
 					<div class="col-sm-3 col-md-3 col-lg-3 bot-list">
@@ -209,7 +165,7 @@
 						</div>
 						<div class="bot-font value">
 							<p class="font-14">电子邮箱</p>
-							<div class="font-24">459071876@gmail</div>
+							<div class="font-24">{{ footer.email }}</div>
 						</div>
 					</div>
 					<div class="col-sm-3 col-md-3 col-lg-3 bot-list">
@@ -218,17 +174,18 @@
 						</div>
 						<div class="bot-font value">
 							<p class="font-14">地址</p>
-							<div class="font-16">四川省成都市高新区新航国际</div>
+							<div class="font-16">{{ footer.address }}</div>
 						</div>
 					</div>
 					<div class="col-sm-3 col-md-3 col-lg-3 bot-code">
-						<img src="images/bot-code.png" />
+						<img src="images/bot-code.png" :src="footer.qrCode" />
 					</div>
 				</div>
 			</div>
 		</div>
-		
-		
+
+		</div>
+
 		<script type="text/javascript">
 			(function() {
 				var triggerBttn = document.getElementById('dh'),
@@ -245,7 +202,7 @@
 					support = {
 						transitions: Modernizr.csstransitions
 					};
-		
+
 				function toggleOverlay() {
 					if (classie.has(overlay, 'open')) {
 						classie.remove(overlay, 'open');
@@ -266,7 +223,7 @@
 						classie.add(overlay, 'open');
 					}
 				}
-		
+
 				triggerBttn.addEventListener('click', toggleOverlay);
 				closeBttn.addEventListener('click', toggleOverlay);
 			})();
@@ -284,9 +241,11 @@
 						slideChangeTransitionStart: function() {
 							updateNavPosition()
 						}
-					}
+					},
+					observer:true,//修改swiper自己或子元素时，自动初始化swiper
+					observeParents:true//修改swiper的父元素时，自动初始化swiper
 				});
-				
+
 				$('.view .arrow-left,.preview .arrow-left').on('click', function(e) {
 					e.preventDefault();
 					if (viewSwiper.activeIndex == 0) {
@@ -303,7 +262,7 @@
 					}
 					viewSwiper.slideNext()
 				});
-				
+
 				var previewSwiper = new Swiper('.preview .swiper-container', {
 					//visibilityFullFit: true,
 					slidesPerView: '3.7',
@@ -314,7 +273,7 @@
 						}
 					}
 				});
-				
+
 				function updateNavPosition() {
 					$('.preview .active-nav').removeClass('active-nav');
 					var activeNav = $('.preview .swiper-slide').eq(viewSwiper.activeIndex).addClass('active-nav');
@@ -329,8 +288,49 @@
 				}
 			})
 		</script>
-		
-		
-		
+		<script>
+			var app = new Vue({
+				el: '#app',
+				data: {
+					product: {
+						name: '',
+						gallery: '',
+						keywords: '',
+						brief: '',
+						picUrl: '',
+						detail: '',
+						buyLink: ''
+					},
+					footer: {
+						tel: '',
+						email: '',
+						address: '',
+						qrCode: ''
+					}
+				},
+				created () {
+					this.fetchFooter()
+					this.fetchProduct()
+				},
+				methods: {
+					fetchProduct () {
+						let url = "http://localhost:8080/kudo/product/1"
+						axios.get(url).then((response) => {
+							var jsonObject = response.data;
+							this.product = jsonObject.data
+							this.product.keywords = this.product.keywords.split(',')
+							console.log(this.product)
+						})
+					},
+					fetchFooter() {
+						let url = "http://localhost:8080/kudo/footer/"
+						axios.get(url).then((response) => {
+							var jsonObject = response.data;
+							this.footer = jsonObject.data
+						})
+					}
+				}
+			})
+		</script>
 	</body>
 </html>

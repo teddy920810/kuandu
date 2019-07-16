@@ -4,29 +4,69 @@
 .section2{
     display: block;
 }
-.section2 .value{
-    width: 100%;
-    height: calc(100%/3);
-    margin: 0 0;
 
+.wrap2-top .index-p3-ul{
+    display: block;
+    margin-top: 5vw;
+}
+.section2 .value{
+    width: 95%;
+    height: calc(100%/3);
+    margin: 0 auto;
+}
+.index-p3-ul img {
+    display: block;
+    margin: 0 auto;
+    width: 17%;
+    margin-bottom: 6px;
+}
+.section2 a{
+  display: block;
+}
+.wrap2-top .index-p3-ul li {
+    color: #b49a64;
+    font-size: 14px;
+    margin-top: 4vw;
+}
+.index-p3-ul span{
+  font-weight: lighter;
+}
+.wrap2-top .title img{
+  width: 52vw;
+}
+.wrap2-top .icon img{
+  display: none;
+}
+.wrap2-top .icon2 img {
+    display: block;
+    text-align: center;
+    /* vertical-align: middle; */
+    width: 40%;
+    margin: 0px auto;
+    margin-top: 18px;
 }
 .wrap2-top{
-    width: 50%;
     float: left;
     height: 99%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.wrap2-bot{
-    width: 50%;
-    height: 100%;
-    float: left;
-    margin-top: 0px;
+.busi-after{
+	/* display: block !important; */
 }
-.wrap2-bot img{
-    width: 100%;
-    height: 100%;
+.busi-after .title img{
+	width: 52%;
+}
+.busi-after p img{
+	width: 20%;
+}
+.wrap2-bot{
+  display: none;
+}
+.wrap2-h{
+	height: 100%;
+  margin: 5px;
 }
 .product-nav{
 	display: none;
@@ -39,6 +79,60 @@
 }
 .product-logo img {
     width: 20vw;
+}
+.wrap3-con{
+	width: 100%;
+}
+.wrap3-img1 img{
+	width: 100%;
+}
+.wrap3-img1{
+	width: 100%;
+}
+.wrap3-img2 img{
+  width: 50%;
+}
+.wrap3-img1 {
+    position: absolute;
+    left: auto !important;
+    margin-left: auto !important;
+    z-index: 999;
+    top: 40%;
+}
+.sec4-page{
+  display: none !important;
+}
+.sec4-con{
+  height: auto;
+}
+.sec4-img{
+  width: 100% !important;
+  height: auto !important;
+}
+.sec4-img .swiper-slide{
+  width: 100% !important;
+}
+.sec4-img .swiper-slide img{
+  width: 100% !important;
+}
+.sec4-p img{
+  width: 90%;
+}
+.sec5-img{
+  display: none;
+}
+.sec5-icon .p1{
+  font-size: 16px;
+}
+.sec5-icon .p2{
+  font-size: 24px;
+}
+.sec5-code2 img{
+  width: 60%;
+  height: 60%;
+}
+.width-300{
+  font-size: 14px;
 }
 .btn-pre{
 	background: #c8c8c8;
@@ -114,6 +208,14 @@
 }
 .mar-top-48{
 	margin-top: 10px;
+}
+.mar-top-30{
+	margin-top: 0px !important;
+}
+.sec4-lunbo {
+    position: relative;
+    width: 100%;
+    height: 64vw;
 }
 .cul-p1 {
 	text-align: center;
