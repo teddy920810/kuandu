@@ -107,7 +107,7 @@ ul, menu, dir {
 	height:3vw;
 	background: #bfa56d;
 	width: 100%;
-	padding-top: 3vw;    
+	padding-top: 3vw;
 	box-sizing: border-box;
 }
 .wrap2-h{
@@ -687,14 +687,13 @@ i{
 }
 .des-img{
 	padding:20px 15px 20px 15px;
-	
+
 }
 .des-img img{
 	width: 100%;
 }
 .cul-banner-img{
-	width: 100%;
-	height: 400px;
+	height: 518px;
 	background: url(../images/brand-banner.jpg) no-repeat;
 	background-size: cover;
 	margin-top: -4px;
@@ -773,6 +772,9 @@ i{
 .inst-banner{
 	background: url(../images/danwei-banner.jpg);
 	height: 518px;
+    background-size: cover;
+    margin-top: -4px;
+    overflow: hidden;
 }
 .inst-pad-22{
 	padding: 22px 228px;
@@ -809,7 +811,7 @@ i{
 .ins-con1-tit2{
 	padding: 10px 0px 20px 10px;
 	box-sizing: border-box;
-	
+
 }
 .font-16{
 	font-size: 16px;
@@ -839,7 +841,7 @@ i{
 	display: flex;
     align-items: center;
     justify-content: center;
-	
+
 }
 .contact-content{
 	width: 430px;

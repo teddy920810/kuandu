@@ -66,7 +66,7 @@
 			</div>
 		</div>
 		<div id="app">
-		<div class="width-100 cul-banner-img inst-banner"></div>
+		<div class="width-100 inst-banner" :style="{backgroundImage:'url('+site.kudo_customized_banner.picUrl+')'}"></div>
 		<div class="container">
 			<div class="row inst-pad-22">
 				<div class="col-sm-4 col-4 text-center inst-tit" @click="changType('SCHOOL')">
@@ -242,6 +242,9 @@
 						ENT:''
 					},
 					dataList: [],
+					site:{
+						kudo_customized_banner: {}
+					},
 					footer: {
 						tel: '',
 						email: '',
@@ -250,6 +253,7 @@
 					}
 				},
 				created () {
+					this.fetchBanner()
 					this.fetchList(this.type)
 					this.fetchFooter()
 				},
@@ -257,17 +261,20 @@
 					fetchFooter() {
 						var url = "http://localhost:8080/kudo/footer/"
 						axios.get(url).then((response) => {
-							var jsonObject = response.data;
-							this.footer = jsonObject.data
-							console.log(this.footer)
+							this.footer = response.data.data
 						})
 					},
 					fetchList(type) {
 						var url = "http://localhost:8080/kudo/customized/" + type
 						axios.get(url).then((response) => {
-							var jsonObject = response.data;
-							this.dataList = jsonObject.data
-							console.log(this.dataList)
+							this.dataList = response.data.data
+						})
+					},
+					fetchBanner() {
+						var url = "http://localhost:8080/kudo/site/customized/"
+						axios.get(url).then((response) => {
+							this.site = response.data.data
+							console.log(this.site)
 						})
 					},
 					changType(type) {
