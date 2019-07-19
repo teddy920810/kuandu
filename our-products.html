@@ -67,157 +67,90 @@
 		</div>
 		<div class="clearfix"></div>
 		<div id="app">
-		<div class="container mar-top-30 pro-tab-con">
-			<div class="row padd-lr-40">
-				<div v-for="item in seriesList" key="item.id" v-if="item.id===currentSeries.id" class="col-sm-6 col-md-6 col-lg-6 text-center border-brown pro-tab-nr">
-					<div class="value">
-						<img :src="item.iconUrl" class="img-fluid" alt="Responsive image">
-					</div>
-					<div class="pro-tab-ul value">
-						<p class="font-18 color-brown">{{item.name}}</p>
-						<ul>
-							<li v-for="kids  in item.children"><a href="">{{kids.name}}</a></li>
-						</ul>
-						<div class="clearfix"></div>
-					</div>
-				</div>
-				<a v-for="item in seriesList" key="item.id" v-if="item.id!==currentSeries.id" href="our-products2.html" class=" col-sm-3 col-md-3 col-lg-3 text-center pro-tab-nr2">
-					<img :src="item.iconUrl" class="img-fluid" alt="Responsive image">
-					<p>{{item.name}}</p>
-				</a>
-				<!--<div class="col-sm-6 col-md-6 col-lg-6 text-center border-brown pro-tab-nr">
-					<div class="value">
-						<img src="images/products-img1.png" class="img-fluid" alt="Responsive image">
-					</div>
-					<div class="pro-tab-ul value">
-						<p class="font-18 color-brown">床品系列</p>
-						<ul>
-							<li><a href="">套件系列</a></li>
-							<li><a href="">枕芯系列</a></li>
-							<li><a href="">被子系列</a></li>
-							<li><a href="">单品系列</a></li>
-						</ul>
-						<div class="clearfix"></div>
+			<div class="container mar-top-30 pro-tab-con">
+				<div class="row padd-lr-40">
+					<div v-for="item in seriesList" key="item.id" :class="item.id===currentSeries.id?'col-sm-6 col-md-6 col-lg-6 text-center border-brown pro-tab-nr':'col-sm-3 col-md-3 col-lg-3 text-center pro-tab-nr2'">
+						<div v-if="item.id===currentSeries.id" class="value">
+							<img :src="item.iconUrl" class="img-fluid" alt="Responsive image">
+						</div>
+						<div v-if="item.id===currentSeries.id" class="pro-tab-ul value">
+							<p class="font-18 color-brown">{{item.name}}</p>
+							<ul>
+								<li v-for="kids  in item.children"><a href="">{{kids.name}}</a></li>
+							</ul>
+							<div class="clearfix"></div>
+						</div>
+						<a v-else :href="'our-products.html?seriesId='+item.id" class="col-sm-3 col-md-3 col-lg-3 text-center pro-tab-nr2">
+							<img :src="item.iconUrl" class="img-fluid" alt="Responsive image">
+							<p>{{item.name}}</p>
+						</a>
 					</div>
 				</div>
-				<a href="our-products2.html" class=" col-sm-3 col-md-3 col-lg-3 text-center pro-tab-nr2">
-					<img src="images/products-img2.png" class="img-fluid" alt="Responsive image">
-					<p>婚庆饰品</p>
-				</a>
-
-				<a href="our-products3.html" class=" col-sm-3 col-md-3 col-lg-3 text-center pro-tab-nr2">
-					<img src="images/products-img3.png" class="img-fluid" alt="Responsive image">
-					<p>家居饰品</p>
-				</a>-->
+				<div class="clearfix"></div>
 			</div>
-			<div class="clearfix"></div>
-		</div>
-		<div class="container">
-			<!---------- 列表开始 ---------->
-			<div class="row">
-				<a v-for="item in productList" :href="'products-detail.html?id='+item.id" class="col-sm-6 col-md-4 col-lg-4 pro-w-con">
-					<div class="pro-w-wrapper">
-					<img :src="item.picUrl" />
-					<p class="pro-w-bg">{{item.name}}</p>
-				  </div>
-				</a>
-				<a class="col-sm-6 col-md-4 col-lg-4 pro-w-con">
-					<div class="pro-w-wrapper">
-					  <img src="images/pro-img.png" />
-					  <p class="pro-w-bg">Pimperne 紫繁篓纯棉四件套</p>
-					</div>
-				</a>
-				<a class="col-sm-6 col-md-4 col-lg-4 pro-w-con">
-					<div class="pro-w-wrapper">
-					  <img src="images/pro-img.png" />
-					  <p class="pro-w-bg">Pimperne 紫繁篓纯棉四件套</p>
-					</div>
-				</a>
-				<a class="col-sm-6 col-md-4 col-lg-4 pro-w-con">
-					<div class="pro-w-wrapper">
-					  <img src="images/pro-img.png" />
-					  <p class="pro-w-bg">Pimperne 紫繁篓纯棉四件套</p>
-					</div>
-				</a>
-				<a class="col-sm-6 col-md-4 col-lg-4 pro-w-con">
-					<div class="pro-w-wrapper">
-					  <img src="images/pro-img.png" />
-					  <p class="pro-w-bg">Pimperne 紫繁篓纯棉四件套</p>
-					</div>
-				</a>
-				<a class="col-sm-6 col-md-4 col-lg-4 pro-w-con">
-					<div class="pro-w-wrapper">
-					  <img src="images/pro-img.png" />
-					  <p class="pro-w-bg">Pimperne 紫繁篓纯棉四件套</p>
-					</div>
-				</a>
-				<a class="col-sm-6 col-md-4 col-lg-4 pro-w-con">
-					<div class="pro-w-wrapper">
-					  <img src="images/pro-img.png" />
-					  <p class="pro-w-bg">Pimperne 紫繁篓纯棉四件套</p>
-					</div>
-				</a>
-				<a class="col-sm-6 col-md-4 col-lg-4 pro-w-con">
-					<div class="pro-w-wrapper">
-					  <img src="images/pro-img.png" />
-					  <p class="pro-w-bg">Pimperne 紫繁篓纯棉四件套</p>
-					</div>
-				</a>
-				<a class="col-sm-6 col-md-4 col-lg-4 pro-w-con">
-					<div class="pro-w-wrapper">
-					  <img src="images/pro-img.png" />
-					  <p class="pro-w-bg">Pimperne 紫繁篓纯棉四件套</p>
-					</div>
-				</a>
-			</div>
-		</div>
-		<!---------- 列表结束 ---------->
-		<!---------- 分页开始 ---------->
-		<div class="container">
-			<div class="pro-page row">
-					<div class="text-center col-sm-6 col-md-6 col-lg-6 btn-pre">上一页</div>
-					<div class="text-center col-sm-6 col-md-6 col-lg-6 btn-next">下一页</div>
-				</div>
-			</div>
-		</div>
-		<!---------- 分页结束 ---------->
-		<!---------- 底部 -------------->
-		<div class="pro-bottom width-100">
 			<div class="container">
+				<!---------- 列表开始 ---------->
 				<div class="row">
-					<div class="col-sm-3 col-md-3 col-lg-3 bot-list">
-						<div class="pro-bot-icon value">
-							<img src="images/bot-img1.png" />
+					<a v-for="item in productList" :href="'products-detail.html?id='+item.id" class="col-sm-6 col-md-4 col-lg-4 pro-w-con">
+						<div class="pro-w-wrapper">
+						<img :src="item.picUrl" />
+						<p class="pro-w-bg">{{item.name}}</p>
+					  </div>
+					</a>
+					<!--<a class="col-sm-6 col-md-4 col-lg-4 pro-w-con">
+						<div class="pro-w-wrapper">
+						  <img src="images/pro-img.png" />
+						  <p class="pro-w-bg">Pimperne 紫繁篓纯棉四件套</p>
 						</div>
-						<div class="bot-font value">
-							<p class="font-14">联系电话</p>
-							<div class="font-24">400-160-1988</div>
+					</a>-->
+				</div>
+			</div>
+			<!---------- 列表结束 ---------->
+			<!---------- 分页开始 ---------->
+			<div class="container">
+				<div class="pro-page row">
+					<div class="text-center col-sm-6 col-md-6 col-lg-6 btn-pre" @click="prePage">上一页</div>
+					<div class="text-center col-sm-6 col-md-6 col-lg-6 btn-next" @click="nextPage">下一页</div>
+				</div>
+			</div>
+			<!---------- 分页结束 ---------->
+			<!---------- 底部 -------------->
+			<div class="pro-bottom width-100">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-3 col-md-3 col-lg-3 bot-list">
+							<div class="pro-bot-icon value">
+								<img src="images/bot-img1.png" />
+							</div>
+							<div class="bot-font value">
+								<p class="font-14">联系电话</p>
+								<div class="font-24">{{ footer.tel }}</div>
+							</div>
 						</div>
-					</div>
-					<div class="col-sm-3 col-md-3 col-lg-3 bot-list">
-						<div class="pro-bot-icon value">
-							<img src="images/bot-img2.png" />
+						<div class="col-sm-3 col-md-3 col-lg-3 bot-list">
+							<div class="pro-bot-icon value">
+								<img src="images/bot-img2.png" />
+							</div>
+							<div class="bot-font value">
+								<p class="font-14">电子邮箱</p>
+								<div class="font-24">{{ footer.email }}</div>
+							</div>
 						</div>
-						<div class="bot-font value">
-							<p class="font-14">电子邮箱</p>
-							<div class="font-24">459071876@gmail</div>
+						<div class="col-sm-3 col-md-3 col-lg-3 bot-list">
+							<div class="pro-bot-icon value">
+								<img src="images/bot-img3.png" />
+							</div>
+							<div class="bot-font value">
+								<p class="font-14">地址</p>
+								<div class="font-16">{{ footer.address }}</div>
+							</div>
 						</div>
-					</div>
-					<div class="col-sm-3 col-md-3 col-lg-3 bot-list">
-						<div class="pro-bot-icon value">
-							<img src="images/bot-img3.png" />
+						<div class="col-sm-3 col-md-3 col-lg-3 bot-code">
+							<img src="images/bot-code.png" :src="footer.qrCode" />
 						</div>
-						<div class="bot-font value">
-							<p class="font-14">地址</p>
-							<div class="font-16">四川省成都市高新区新航国际</div>
-						</div>
-					</div>
-					<div class="col-sm-3 col-md-3 col-lg-3 bot-code">
-						<img src="images/bot-code.png" />
 					</div>
 				</div>
 			</div>
-		</div>
 		</div>
 		<script type="text/javascript">
 			(function() {
@@ -268,7 +201,7 @@
 				el: '#app',
 				data: {
 					page:1,
-					limit:10,
+					limit:9,
 					pages:1,
 					total:0,
 					productList: [],
@@ -283,33 +216,51 @@
 				},
 				created () {
 					this.fetchFooter()
-					this.fetchList()
+					this.fetchList(this.getQueryString("seriesId"))
 				},
 				methods: {
-					fetchList () {
-						let url = "http://localhost:8080/kudo/product/"
+					fetchList (seriesId) {
+						let url = ""
+						if(seriesId == null){
+							url = "http://localhost:8080/kudo/product/?seriesId=0"
+						}else{
+							url = "http://localhost:8080/kudo/product/?seriesId="+seriesId
+						}
+						url = url + "&page=" + this.page
 						axios.get(url).then((response) => {
-							var jsonObject = response.data;
-						this.productList = jsonObject.data.productList
-						this.seriesList = jsonObject.data.seriesList
-						this.currentSeries = jsonObject.data.currentSeries
-						this.page = jsonObject.data.page
-						this.limit = jsonObject.data.limit
-						this.pages = jsonObject.data.pages
-						this.total = jsonObject.data.total
-						console.log(this.seriesList,this.productList)
-					}).catch(function (error) {
+							this.productList = response.data.data.productList
+							this.seriesList = response.data.data.seriesList
+							this.currentSeries = response.data.data.currentSeries
+							this.page = response.data.data.page
+							this.limit = response.data.data.limit
+							this.pages = response.data.data.pages
+							this.total = response.data.data.total
+							console.log(this.seriesList,this.productList)
+						}).catch(function (error) {
 							console.log(error);
 						});
 					},
 					fetchFooter() {
 						let url = "http://localhost:8080/kudo/footer/"
 						axios.get(url).then((response) => {
-							var jsonObject = response.data;
-						this.footer = jsonObject.data
-					}).catch(function (error) {
+							this.footer = response.data.data
+							console.log(this.footer)
+						}).catch(function (error) {
 							console.log(error);
 						});
+					},
+					prePage() {
+						this.page = this.page - 1
+						this.fetchList(this.currentSeries.id)
+					},
+					nextPage() {
+						this.page = this.page + 1
+						this.fetchList(this.currentSeries.id)
+					},
+					getQueryString(name) {
+						let reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+						let r = window.location.search.substr(1).match(reg);//search,查询？后面的参数，并匹配正则
+						if(r!=null)return  unescape(r[2]); return null;
 					}
 				}
 			})

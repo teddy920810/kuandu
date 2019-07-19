@@ -65,28 +65,50 @@
 				<div class="clearfix"></div>
 			</div>
 		</div>
+		<div id="app">
 		<div class="width-100 cul-banner-img inst-banner"></div>
 		<div class="container">
 			<div class="row inst-pad-22">
-				<div class="col-sm-4 col-4 text-center inst-tit inst-tit-hover">
+				<div class="col-sm-4 col-4 text-center inst-tit" @click="changType('SCHOOL')">
 					<img src="images/danwei-tit1-hover.png" />
 					<p class="mar-top-10">学校定制</p>
 				</div>
-				<div class="col-sm-4 col-4 text-center inst-tit">
+				<div class="col-sm-4 col-4 text-center inst-tit inst-tit-hover" @click="changType('HOTEL')">
 					<img src="images/danwei-tit2.png"/>
 					<p class="mar-top-10">酒店定制</p>
 				</div>
-				<div class="col-sm-4 col-4 text-center inst-tit">
+				<div class="col-sm-4 col-4 text-center inst-tit" @click="changType('ENT')">
 					<img src="images/danwei-tit3.png" />
 					<p class="mar-top-10">企事业单位定制</p>
 				</div>
 			</div>
 		</div>
-		<div class="ins-cont1">
-			<div class="container">
-				<div class="row ins-con1-title">
+		<div v-for="(item,index) in dataList" :key="item.id">
+			<div v-if="index==0" class="ins-cont1">
+				<div class="container">
+					<div class="row ins-con1-title">
 						<img src="images/cus-con1.png" />
+					</div>
+					<div class="row">
+						<div class="col-sm-7 danw-img1">
+							<img src="images/danw-img1.png" />
+						</div>
+						<div class="col-sm-5">
+							<div class="ins-part-tit">
+								<div class=" ins-con1-tit1 value">
+									<img src="images/danwei-icon.png" />
+								</div>
+								<div class="ins-con1-tit2 value">
+									<p class="font-28">{{ item.title }}</p>
+									<i class="font-16 color-9 font-lighter">{{ item.titleEn }}</i>
+								</div>
+							</div>
+							<div class="font-14 mar-top-48" v-html="item.desc"></div>
+						</div>
+					</div>
 				</div>
+			</div>
+			<div v-else-if="index%2==0" class="container" style="margin-bottom: 50px">
 				<div class="row">
 					<div class="col-sm-7 danw-img1">
 						<img src="images/danw-img1.png" />
@@ -97,49 +119,34 @@
 								<img src="images/danwei-icon.png" />
 							</div>
 							<div class="ins-con1-tit2 value">
-								<p class="font-28">单人床</p>
-								<i class="font-16 color-9 font-lighter">SINGLE BED</i>
+								<p class="font-28">{{ item.title }}</p>
+								<i class="font-16 color-9 font-lighter">{{ item.titleEn }}</i>
 							</div>
 						</div>
-						<div class="font-14 mar-top-48">
-							第一步：看花色，一般的被套花色分为提花和印花两种，两种花色各自不同，但是相比较来说，提花的要更加的耐磨，耐用。印花的花色多样，美丽，漂亮。如果你喜欢素雅的花色，建议更多考虑提花面料的被套。
-<br />
-							第二步:摸质感，我们在买衣服的时候，常常会喜欢用手去摸摸衣服的面料，这样的原理同样可以用在我们挑选被套的时候，质地好的被套会有光滑，柔软的感觉。
-<br />
-							第三步：闻气味，被套能有什么气味，厂家一般会采用各种浓郁的香料去遮盖杂质气味，所以一般香味都会比较浓烈。
-							<br />
+						<div class="font-14 mar-top-48" v-html="item.desc"></div>
+					</div>
+				</div>
+			</div>
+			<div v-else class="container" style="margin-bottom: 50px">
+				<div class="row">
+					<div class="col-sm-5">
+						<div class="ins-part-tit">
+							<div class=" ins-con1-tit1 value">
+								<img src="images/danwei-icon.png" />
+							</div>
+							<div class="ins-con1-tit2 value">
+								<p class="font-28">{{ item.title }}</p>
+								<i class="font-16 color-9 font-lighter">{{ item.titleEn }}</i>
+							</div>
 						</div>
+						<div class="font-14 mar-top-48" v-html="item.desc"></div>
+					</div>
+					<div class="col-sm-7 danw-img1">
+						<img src="images/danw-img1.png" />
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-5">
-					<div class="ins-part-tit">
-						<div class=" ins-con1-tit1 value">
-							<img src="images/danwei-icon.png" />
-						</div>
-						<div class="ins-con1-tit2 value">
-							<p class="font-28">单人床</p>
-							<i class="font-16 color-9 font-lighter">SINGLE BED</i>
-						</div>
-					</div>
-					<div class="font-14 mar-top-48">
-						第一步：看花色，一般的被套花色分为提花和印花两种，两种花色各自不同，但是相比较来说，提花的要更加的耐磨，耐用。印花的花色多样，美丽，漂亮。如果你喜欢素雅的花色，建议更多考虑提花面料的被套。
-<br />
-						第二步:摸质感，我们在买衣服的时候，常常会喜欢用手去摸摸衣服的面料，这样的原理同样可以用在我们挑选被套的时候，质地好的被套会有光滑，柔软的感觉。
-<br />
-						第三步：闻气味，被套能有什么气味，厂家一般会采用各种浓郁的香料去遮盖杂质气味，所以一般香味都会比较浓烈。
-						<br />
-					</div>
-				</div>
-				<div class="col-sm-7 danw-img1">
-					<img src="images/danw-img1.png" />
-				</div>
-			</div>
-		</div>
-
 		<!---------- 底部 -------------->
 		<div class="pro-bottom width-100">
 			<div class="container">
@@ -150,7 +157,7 @@
 						</div>
 						<div class="bot-font value">
 							<p class="font-14">联系电话</p>
-							<div class="font-24">400-160-1988</div>
+							<div class="font-24">{{ footer.tel }}</div>
 						</div>
 					</div>
 					<div class="col-sm-3 col-md-3 col-lg-3 bot-list">
@@ -159,7 +166,7 @@
 						</div>
 						<div class="bot-font value">
 							<p class="font-14">电子邮箱</p>
-							<div class="font-24">459071876@gmail</div>
+							<div class="font-24">{{ footer.email }}</div>
 						</div>
 					</div>
 					<div class="col-sm-3 col-md-3 col-lg-3 bot-list">
@@ -168,14 +175,15 @@
 						</div>
 						<div class="bot-font value">
 							<p class="font-14">地址</p>
-							<div class="font-16">四川省成都市高新区新航国际</div>
+							<div class="font-16">{{ footer.address }}</div>
 						</div>
 					</div>
 					<div class="col-sm-3 col-md-3 col-lg-3 bot-code">
-						<img src="images/bot-code.png" />
+						<img src="images/bot-code.png" :src="footer.qrCode" />
 					</div>
 				</div>
 			</div>
+		</div>
 		</div>
 
 		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
@@ -222,6 +230,53 @@
 			})();
 
 		</script>
-
+		<script>
+			var app = new Vue({
+				el: '#app',
+				data: {
+					type: 'SCHOOL',
+					typeImg: 'images/cus-con1.png',
+					imgMap: {
+						SCHOOL: 'images/cus-con1.png',
+						HOTEL: '',
+						ENT:''
+					},
+					dataList: [],
+					footer: {
+						tel: '',
+						email: '',
+						address: '',
+						qrCode: ''
+					}
+				},
+				created () {
+					this.fetchList(this.type)
+					this.fetchFooter()
+				},
+				methods: {
+					fetchFooter() {
+						var url = "http://localhost:8080/kudo/footer/"
+						axios.get(url).then((response) => {
+							var jsonObject = response.data;
+							this.footer = jsonObject.data
+							console.log(this.footer)
+						})
+					},
+					fetchList(type) {
+						var url = "http://localhost:8080/kudo/customized/" + type
+						axios.get(url).then((response) => {
+							var jsonObject = response.data;
+							this.dataList = jsonObject.data
+							console.log(this.dataList)
+						})
+					},
+					changType(type) {
+						this.typeImg = this.imgMap[type]
+						this.type = type
+						this.fetchList(this.type)
+					}
+				}
+			})
+		</script>
 	</body>
 </html>
