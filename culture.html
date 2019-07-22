@@ -219,13 +219,13 @@
 				},
 				methods: {
 					fetchFooter() {
-						var url = "http://localhost:8080/kudo/footer/"
+						var url = "http://132.232.65.201:8080/kudo/footer/"
 						axios.get(url).then((response) => {
 							this.footer = response.data.data
 						})
 					},
 					fetchBanner() {
-						var url = "http://localhost:8080/kudo/site/brand/"
+						var url = "http://132.232.65.201:8080/kudo/site/brand/"
 						axios.get(url).then((response) => {
 							this.site = response.data.data
 							console.log(this.site)

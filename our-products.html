@@ -222,9 +222,9 @@
 					fetchList (seriesId) {
 						let url = ""
 						if(seriesId == null){
-							url = "http://localhost:8080/kudo/product/?seriesId=0"
+							url = "http://132.232.65.201:8080/kudo/product/?seriesId=0"
 						}else{
-							url = "http://localhost:8080/kudo/product/?seriesId="+seriesId
+							url = "http://132.232.65.201:8080/kudo/product/?seriesId="+seriesId
 						}
 						url = url + "&page=" + this.page
 						axios.get(url).then((response) => {
@@ -241,7 +241,7 @@
 						});
 					},
 					fetchFooter() {
-						let url = "http://localhost:8080/kudo/footer/"
+						let url = "http://132.232.65.201:8080/kudo/footer/"
 						axios.get(url).then((response) => {
 							this.footer = response.data.data
 							console.log(this.footer)

@@ -206,7 +206,7 @@
 			  methods: {
 				subForm: function () {
 				  console.log(this.message)
-				  axios.post('http://localhost:8080/kudo/contact/', this.message).then((response) => {
+				  axios.post('http://132.232.65.201:8080/kudo/contact/', this.message).then((response) => {
 						console.log(response);
 					})
 					.catch((error) => {
@@ -214,7 +214,7 @@
 					});
 				},
 				fetchFooter() {
-					var url = "http://localhost:8080/kudo/footer/"
+					var url = "http://132.232.65.201:8080/kudo/footer/"
 					axios.get(url).then((response) => {
 						var jsonObject = response.data;
 						this.footer = jsonObject.data

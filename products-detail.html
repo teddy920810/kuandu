@@ -316,7 +316,7 @@
 				},
 				methods: {
 					fetchProduct (id) {
-						let url = "http://localhost:8080/kudo/product/"+id
+						let url = "http://132.232.65.201:8080/kudo/product/"+id
 						axios.get(url).then((response) => {
 							var jsonObject = response.data;
 							this.product = jsonObject.data
@@ -326,7 +326,7 @@
 						});
 					},
 					fetchFooter() {
-						let url = "http://localhost:8080/kudo/footer/"
+						let url = "http://132.232.65.201:8080/kudo/footer/"
 						axios.get(url).then((response) => {
 							var jsonObject = response.data;
 							this.footer = jsonObject.data
