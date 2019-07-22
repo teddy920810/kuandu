@@ -210,9 +210,8 @@
     z-index: 10;
 }
 .cul-banner-img{
-	width: 100%;
     height: 180px;
-    background: url(../images/brand-banner.jpg) no-repeat -154px;
+    background: no-repeat -154px;
     background-size: cover;
     margin-top: -4px;
     overflow: hidden;
@@ -251,6 +250,14 @@
 }
 .cul-part2-img1{
 	height: auto;
+}
+
+.inst-banner{
+    height: 180px;
+    background: no-repeat -122px;
+    background-size: cover;
+    margin-top: -4px;
+    overflow: hidden;
 }
 .inst-pad-22 {
     padding: 10px 15px;

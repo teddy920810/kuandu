@@ -729,7 +729,7 @@ i{
 }
 .cul-banner-img{
 	height: 518px;
-	background: url(../images/brand-banner.jpg) no-repeat;
+	background: no-repeat;
 	background-size: cover;
 	margin-top: -4px;
 	overflow: hidden;
@@ -805,8 +805,8 @@ i{
 	margin-bottom: 30px;
 }
 .inst-banner{
-	background: url(../images/danwei-banner.jpg);
 	height: 518px;
+    background: no-repeat;
     background-size: cover;
     margin-top: -4px;
     overflow: hidden;
