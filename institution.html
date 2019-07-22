@@ -69,16 +69,19 @@
 		<div class="width-100 inst-banner" :style="{backgroundImage:'url('+site.kudo_customized_banner.picUrl+')'}"></div>
 		<div class="container">
 			<div class="row inst-pad-22">
-				<div class="col-sm-4 col-4 text-center inst-tit" @click="changType('SCHOOL')">
-					<img src="images/danwei-tit1-hover.png" />
+				<div class="col-sm-4 col-4 text-center inst-tit" :class="['SCHOOL'==type?'inst-tit-hover':'']" @click="changType('SCHOOL')">
+					<img v-if="'SCHOOL'==type" src="images/danwei-tit1-hover.png" />
+					<img v-else src="images/danwei-tit1.png" />
 					<p class="mar-top-10">学校定制</p>
 				</div>
-				<div class="col-sm-4 col-4 text-center inst-tit inst-tit-hover" @click="changType('HOTEL')">
-					<img src="images/danwei-tit2.png"/>
+				<div class="col-sm-4 col-4 text-center inst-tit" :class="['HOTEL'==type?'inst-tit-hover':'']" @click="changType('HOTEL')">
+					<img v-if="'HOTEL'==type" src="images/danwei-tit2-hover.png"/>
+					<img v-else src="images/danwei-tit2.png"/>
 					<p class="mar-top-10">酒店定制</p>
 				</div>
-				<div class="col-sm-4 col-4 text-center inst-tit" @click="changType('ENT')">
-					<img src="images/danwei-tit3.png" />
+				<div class="col-sm-4 col-4 text-center inst-tit" :class="['ENT'==type?'inst-tit-hover':'']" @click="changType('ENT')">
+					<img v-if="'ENT'==type" src="images/danwei-tit3-hover.png" />
+					<img v-else src="images/danwei-tit3.png" />
 					<p class="mar-top-10">企事业单位定制</p>
 				</div>
 			</div>
@@ -87,7 +90,9 @@
 			<div v-if="index==0" class="ins-cont1">
 				<div class="container">
 					<div class="row ins-con1-title">
-						<img src="images/cus-con1.png" />
+						<img v-if="'SCHOOL'==type" src="images/cus-con1.png" />
+						<img v-if="'HOTEL'==type" src="images/cus-con2.png" />
+						<img v-if="'ENT'==type" src="images/cus-con3.png" />
 					</div>
 					<div class="row">
 						<div class="col-sm-7 danw-img1">

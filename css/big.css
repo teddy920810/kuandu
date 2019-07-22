@@ -2,7 +2,7 @@
     width: 25vw;
 }
 .wrap3-img1 img {
-    width: 100%;
+    /* width: 100%; */
 }
 .wrap2-top .icon {
     margin-top: 60px;
@@ -11,7 +11,7 @@
     margin-top: 1vw;
 }
 .index-p3-ul li{
-    margin-top: 2vw;
+    margin-top: 1vw;
 }
 .wrap2-top .index-p3-ul{
     display: none;

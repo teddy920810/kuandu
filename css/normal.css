@@ -85,6 +85,7 @@ ul, menu, dir {
     justify-content: flex-start;
     margin:0 20px;
     width: 388px;
+	overflow: hidden;
     /* height: 725px; */
 }
 .wrap2-top{
@@ -125,9 +126,36 @@ ul, menu, dir {
 	left: 70%;
 	margin-left: -350px;
 	z-index: 999;
+	width: 770px;
+	height: 710px;
+	background: url(../images/sec3-img.png);
+	background-size: cover;
 }
 .wrap3-img1 img{
-	width: 80%;
+	/* width: 80%; */
+}
+.wrap3-con-img {
+	margin-right: 28px;
+    margin-top: 58px;
+}
+.wrap3-img1 p{
+	font-size: 34px;
+	color: white;
+	font-weight: lighter;
+	text-align: left;
+	padding: 30px;
+    box-sizing: border-box;
+    padding-bottom: 8px;
+}
+.wrap3-img1 .wrap3-i{
+	font-size: 16px;
+	color: #abb7c3;
+	font-weight: lighter;
+	text-transform:uppercase;
+	padding:0 34px;
+	box-sizing: border-box;
+	word-wrap:break-word;
+	text-align: left;
 }
 .wrap3-img2{
 	position: absolute;
@@ -247,16 +275,23 @@ ul li{
 }
 .sec4-img{
     width: 902px;
-    height: 552px;
+    height: 430px !important;
     position: absolute !important;
     right: 0;
-    z-index: 1;
+    z-index: -1;
+    overflow: hidden;
 }
 .sec4-img1{
     background-size: cover;
 }
 .sec4-lunbo{
   position: relative;
+}
+.sec4-page li{
+	opacity: 0.2;
+}
+.hehe{
+	opacity: 1 !important;
 }
 .section5{
     background: url("../images/sec5-bg.jpg");

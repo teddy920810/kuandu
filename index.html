@@ -22,6 +22,9 @@
 	<script src="js/jquery.parallax.min.js"></script>
   	<script src="js/modernizr.custom.js"></script>
   	<script src="js/classie.js"></script>
+	<!-- VUE -->
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
 	<!----------- 右上角导航开始 ------------>
@@ -52,9 +55,10 @@
 	    <div class="hs-service-bg"></div>
 	</div>
 	<!----------- 右上角导航结束 ------------>
+	<div></div>
 	<div id="fullpage">
 		<!------------------第一屏 --------------------------->
-		<div class="section section1">
+		<div class="section section1" :style="{backgroundImage:'url('+site.kudo_index_banner.picUrl+')'}">
 			<p class="values1">
 				<img src="images/index-img.png">
 			</p>
@@ -68,28 +72,10 @@
 							<div class="title">
 								<img src="images/page2-tit1.png" />
 							</div>
-							<div class="icon">
+							<div class="icon icon2">
 								<img src="images/img2-icon1.png" />
 							</div>
 						</div>
-				  		<ul class="index-p3-ul">
-						  <li style="text-align: center;">
-							  <p><img src="images/icon1-li1.png"/></p>
-							  <span>套件系列</span>
-						  </li>
-						   <li style="text-align: center;">
-							  <p><img src="images/icon1-li2.png"/></p>
-							  <span>套件系列</span>
-						  </li>
-						   <li style="text-align: center;">
-							  <p><img src="images/icon1-li3.png"/></p>
-							  <span>套件系列</span>
-						  </li>
-						   <li style="text-align: center;">
-							  <p><img src="images/icon1-li4.png"/></p>
-							  <span>套件系列</span>
-						  </li>
-				  		</ul>
 					</div>
 					<div class="busi-after busi-after2 list flip" style="z-index: 100">
 						<div class="title">
@@ -116,7 +102,7 @@
 					</div>
 				</div>
 				<div class="wrap2-bot" style="position: relative;">
-					<img src="images/img2-bot1.png" />
+					<img src="images/img2-bot1.png" :src="site.kudo_index_category.gallery[0]"/>
 				</div>
 			</div>
 			<div class="value">
@@ -141,7 +127,7 @@
 				</div>
 			</div>
 				<div class="wrap2-bot" style="position: relative;">
-				<img src="images/img2-bot2.png" />
+				<img src="images/img2-bot2.png" :src="site.kudo_index_category.gallery[1]" />
 			</div>
 			</div>
 			<div class="value">
@@ -151,28 +137,10 @@
 							<div class="title">
 								<img src="images/page2-tit3.png" />
 							</div>
-		        		<div class="icon">
+		        		<div class="icon icon2">
 		        			<img src="images/img2-icon3.png" />
 		        		</div>
 		        	</div>
-              		<ul class="index-p3-ul">
-                  		<li style="text-align: center;">
-						  <p><img src="images/icon1-li1.png"/></p>
-						  <span>套件系列</span>
-					    </li>
-					   <li style="text-align: center;">
-						  <p><img src="images/icon1-li2.png"/></p>
-						  <span>套件系列</span>
-					   </li>
-					   <li style="text-align: center;">
-						  <p><img src="images/icon1-li3.png"/></p>
-						  <span>套件系列</span>
-					   </li>
-					   <li style="text-align: center;">
-						  <p><img src="images/icon1-li4.png"/></p>
-						  <span>套件系列</span>
-					   </li>
-              		</ul>
 		        </div>
 		        <div class="busi-after busi-after2 list flip" style="z-index: 100">
 		            <div class="title">
@@ -199,7 +167,7 @@
 		        </div>
 			 </div>
 				<div class="wrap2-bot" style="position: relative;">
-					<img src="images/img2-bot3.png" />
+					<img src="images/img2-bot3.png" :src="site.kudo_index_category.gallery[2]" />
 				</div>
 			</div>
 		</div>
@@ -207,7 +175,11 @@
 	<!------------------第三屏  开始--------------------------->
 	<div class="section section3">
     <div class="wrap3-img1">
-    	<img src="images/sec3-img.png" />
+		<div class="wrap3-con-img">
+			<img src="images/sec3-img2.png" :src="site.kudo_index_brand.picUrl" />
+		</div>
+		<p>宽度产品涵盖一系列完美且无可挑剔的家居及装饰。 </p>
+		<div class="wrap3-i">Kudo home products cover a series of perfect and impeccable home and decoration.</div>
     </div>
     <div class="wrap3-img2">
     	<img src="images/sec3-img1.png" />
@@ -227,19 +199,19 @@
           <div class="brt-works-container sec4-img sec4-img1 mar-top-20">
                <div class="brt-works-wrapper">
                    <div class="slide">
-                       <img src="images/sec4-img.jpg" />
+                       <img src="images/sec4-img.jpg" :src="site.kudo_index_school.picUrl" />
                    </div>
                    <div class="slide">
-                       <img src="images/sec4-img2.jpg" />
+                       <img src="images/sec4-img2.jpg" :src="site.kudo_index_hotel.picUrl" />
                    </div>
                    <div class="slide">
-                       <img src="images/sec4-img3.jpg" />
+                       <img src="images/sec4-img3.jpg" :src="site.kudo_index_ent.picUrl" />
                    </div>
                </div>
            </div>
            <!-- Add Pagination -->
            <ul class="brt-works-pagination sec4-page">
-			   <li class="service-item service-item2 " onclick="slidePageClick(0)"><img src="images/sec4-left-tit1-hover.png" /></li>
+			   <li class="service-item service-item2 hehe" onclick="slidePageClick(0)"><img src="images/sec4-left-tit1-hover.png" /></li>
 			   <li class="service-item service-item6 " onclick="slidePageClick(1)"><img src="images/sec4-left-tit2-hover.png" /></li>
 			   <li class="service-item service-item1 " onclick="slidePageClick(2)"><img src="images/sec4-tit3-hover.png" /></li>
            </ul>
@@ -260,25 +232,25 @@
 						<img src="images/sec5-icon1.png" />
 					</div>
 					<p class="p1">联系电话</p>
-					<p class="p2">400-160-1988</p>
+					<p class="p2">{{ footer.tel }}</p>
 				</div>
 				<div class="col-sm-4 col-md-4 col-lg-4 sec5-icon">
 					<div class="sec5-img">
 						<img src="images/sec5-icon2.png" />
 					</div>
 					<p class="p1">电子邮箱</p>
-					<p class="p2">459071876@gmail</p>
+					<p class="p2">{{ footer.email }}</p>
 				</div>
 				<div class="col-sm-4 col-md-4 col-lg-4 sec5-icon">
 					<div class="sec5-img">
 						<img src="images/sec5-icon3.png" />
 					</div>
-					<p class="p1">联系电话</p>
-					<p class="p2">400-160-1988</p>
+					<p class="p1">地址</p>
+					<p class="p2">{{ footer.address }}</p>
 				</div>
 			</div>
 			<div class="row sec5-code2">
-				<img src="images/sec5-code.png"/>
+				<img src="images/sec5-code.png" :src="footer.qrCode"/>
 			</div>
       <div class="row">
         <p class="width-300 mar-top-20">
@@ -290,7 +262,7 @@
 	</div>
 	</div>
 	<!------------------第五屏  结束--------------------------->
-<script type="text/javascript">
+	<script type="text/javascript">
 	(function() {
 		var triggerBttn = document.getElementById('dh'),
 			overlay = document.querySelector('div.overlay'),
@@ -330,8 +302,8 @@
 		triggerBttn.addEventListener('click', toggleOverlay);
 		closeBttn.addEventListener('click', toggleOverlay);
 	})();
-</script>
-<script>
+	</script>
+	<script>
 	$(function(){
 		$('#fullpage').fullpage({
 			navigation           :true,                            //圆点导航
@@ -373,6 +345,46 @@
 	function slidePageClick(index){
 		$.fn.fullpage.moveTo(4, index)
 	}
-</script>
+	</script>
+	<script>
+		var app = new Vue({
+			el: '#fullpage',
+			data: {
+				site:{
+					kudo_index_banner: {},
+					kudo_index_category: {gallery:[]},
+					kudo_index_brand: {},
+					kudo_index_ent: {},
+					kudo_index_hotel: {},
+					kudo_index_school: {}
+				},
+				footer: {
+					tel: '',
+					email: '',
+					address: '',
+					qrCode: ''
+				}
+			},
+			created () {
+				this.fetchBanner()
+				this.fetchFooter()
+			},
+			methods: {
+				fetchFooter() {
+					var url = "http://localhost:8080/kudo/footer/"
+					axios.get(url).then((response) => {
+						this.footer = response.data.data
+					})
+				},
+				fetchBanner() {
+					var url = "http://localhost:8080/kudo/home/"
+					axios.get(url).then((response) => {
+						this.site = response.data.data.site
+						console.log(this.site)
+					})
+				}
+			}
+		})
+	</script>
 </body>
 </html>
