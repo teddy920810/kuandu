@@ -57,7 +57,9 @@ ul, menu, dir {
     -webkit-margin-end: 0px;
     -webkit-padding-start:0px;
 }
-
+.bot-code img{
+  width: 40%;
+}
 
 .section {
     text-align: center;
