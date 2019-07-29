@@ -227,7 +227,12 @@
 							url = "http://132.232.65.201:8080/kudo/product/?seriesId="+seriesId
 						}
 						url = url + "&page=" + this.page
-						axios.get(url).then((response) => {
+						axios.get(url, {
+							headers: {
+								'Content-Type': 'application/json',
+								'Accept': 'application/json'
+							}
+						}).then((response) => {
 							this.productList = response.data.data.productList
 							this.seriesList = response.data.data.seriesList
 							this.currentSeries = response.data.data.currentSeries
@@ -242,7 +247,12 @@
 					},
 					fetchFooter() {
 						let url = "http://132.232.65.201:8080/kudo/footer/"
-						axios.get(url).then((response) => {
+						axios.get(url, {
+							headers: {
+								'Content-Type': 'application/json',
+								'Accept': 'application/json'
+							}
+						}).then((response) => {
 							this.footer = response.data.data
 							console.log(this.footer)
 						}).catch(function (error) {

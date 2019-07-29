@@ -317,7 +317,12 @@
 				methods: {
 					fetchProduct (id) {
 						let url = "http://132.232.65.201:8080/kudo/product/"+id
-						axios.get(url).then((response) => {
+						axios.get(url, {
+							headers: {
+								'Content-Type': 'application/json',
+								'Accept': 'application/json'
+							}
+						}).then((response) => {
 							var jsonObject = response.data;
 							this.product = jsonObject.data
 							console.log(this.product)
@@ -327,7 +332,12 @@
 					},
 					fetchFooter() {
 						let url = "http://132.232.65.201:8080/kudo/footer/"
-						axios.get(url).then((response) => {
+						axios.get(url, {
+							headers: {
+								'Content-Type': 'application/json',
+								'Accept': 'application/json'
+							}
+						}).then((response) => {
 							var jsonObject = response.data;
 							this.footer = jsonObject.data
 						}).catch(function (error) {

@@ -220,13 +220,23 @@
 				methods: {
 					fetchFooter() {
 						var url = "http://132.232.65.201:8080/kudo/footer/"
-						axios.get(url).then((response) => {
+						axios.get(url, {
+							headers: {
+								'Content-Type': 'application/json',
+								'Accept': 'application/json'
+							}
+						}).then((response) => {
 							this.footer = response.data.data
 						})
 					},
 					fetchBanner() {
 						var url = "http://132.232.65.201:8080/kudo/site/brand/"
-						axios.get(url).then((response) => {
+						axios.get(url, {
+							headers: {
+								'Content-Type': 'application/json',
+								'Accept': 'application/json'
+							}
+						}).then((response) => {
 							this.site = response.data.data
 							console.log(this.site)
 						})

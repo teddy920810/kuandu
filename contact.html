@@ -206,7 +206,12 @@
 			  methods: {
 				subForm: function () {
 				  console.log(this.message)
-				  axios.post('http://132.232.65.201:8080/kudo/contact/', this.message).then((response) => {
+				  axios.post('http://132.232.65.201:8080/kudo/contact/', this.message, {
+					  headers: {
+						  'Content-Type': 'application/json',
+						  'Accept': 'application/json'
+					  }
+				  }).then((response) => {
 						console.log(response);
 					})
 					.catch((error) => {
@@ -215,7 +220,12 @@
 				},
 				fetchFooter() {
 					var url = "http://132.232.65.201:8080/kudo/footer/"
-					axios.get(url).then((response) => {
+					axios.get(url, {
+						headers: {
+							'Content-Type': 'application/json',
+							'Accept': 'application/json'
+						}
+					}).then((response) => {
 						var jsonObject = response.data;
 						this.footer = jsonObject.data
 						console.log(this.footer)
