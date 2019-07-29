@@ -316,7 +316,7 @@
 				},
 				methods: {
 					fetchProduct (id) {
-						let url = "http://132.232.65.201:8080/kudo/product/"+id
+						let url = "https://www.kuanduhome.com/api/kudo/product/"+id
 						axios.get(url, {
 							headers: {
 								'Content-Type': 'application/json',
@@ -331,7 +331,7 @@
 						});
 					},
 					fetchFooter() {
-						let url = "http://132.232.65.201:8080/kudo/footer/"
+						let url = "https://www.kuanduhome.com/api/kudo/footer/"
 						axios.get(url, {
 							headers: {
 								'Content-Type': 'application/json',
