@@ -296,7 +296,7 @@ ul li{
 	opacity: 1 !important;
 }
 .section5{
-    background: url("../images/sec5-bg.jpg");
+    background: url(http://pv2uyb7vr.bkt.clouddn.com/image/jpg/sec5-bg.jpg);
     background-size: cover;
     display: flex;
     align-items: center;
@@ -873,7 +873,7 @@ i{
 .contact{
 	width: 100%;
 	height: 748px;
-	background: url(../images/contact-bg.jpg);
+	background: url(http://pv2uyb7vr.bkt.clouddn.com/image/jpg/contact-bg.jpg);
 	background-size: cover;
 	display: flex;
     align-items: center;
