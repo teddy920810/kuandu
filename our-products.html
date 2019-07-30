@@ -240,7 +240,6 @@
 							this.limit = response.data.data.limit
 							this.pages = response.data.data.pages
 							this.total = response.data.data.total
-							console.log(this.seriesList,this.productList)
 						}).catch(function (error) {
 							console.log(error);
 						});
@@ -254,7 +253,6 @@
 							}
 						}).then((response) => {
 							this.footer = response.data.data
-							console.log(this.footer)
 						}).catch(function (error) {
 							console.log(error);
 						});

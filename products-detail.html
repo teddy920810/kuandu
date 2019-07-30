@@ -311,7 +311,6 @@
 				},
 				created () {
 					this.fetchFooter()
-					console.log(this.getQueryString("id"))
                     this.fetchProduct(this.getQueryString("id"))
 				},
 				methods: {
@@ -325,7 +324,6 @@
 						}).then((response) => {
 							var jsonObject = response.data;
 							this.product = jsonObject.data
-							console.log(this.product)
 						}).catch(function (error) {
 							console.log(error);
 						});

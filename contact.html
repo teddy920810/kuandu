@@ -205,7 +205,6 @@
 			  },
 			  methods: {
 				subForm: function () {
-				  console.log(this.message)
 				  axios.post('https://www.kuanduhome.com/api/kudo/contact/', this.message, {
 					  headers: {
 						  'Content-Type': 'application/json',
@@ -228,7 +227,6 @@
 					}).then((response) => {
 						var jsonObject = response.data;
 						this.footer = jsonObject.data
-						console.log(this.footer)
 					})
 				}
 			  }
