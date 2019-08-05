@@ -234,18 +234,28 @@
     height: 64vw;
 }
 .cul-p1 {
-	text-align: center;
+	text-align: left;
 	width: 100%;
 	margin-left: 0;
-    letter-spacing: 4px;
+  letter-spacing: 4px;
 	padding-bottom: 20px;
+  font-size: 14px !important;
 }
 .cul-h-img1 img {
     width: 100%;
     margin-top: 28px;
 }
+.cul-part3-des{
+  font-size: 14px !important;
+  letter-spacing: 6px;
+  line-height: 28px;
+}
 .cul-font2 {
     letter-spacing: 3px;
+    font-size: 14px !important;
+}
+.cul-part3-img{
+  margin-top: 20px;
 }
 .cul-h-img2 img{
 	margin-top: 60px;
