@@ -19,3 +19,7 @@
 .busi-after .icon {
     margin-top: 60px;
 }
+.pc-slide-views .swiper-slide img{
+	width: 100%;
+	height: 343px;
+};

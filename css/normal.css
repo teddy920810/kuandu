@@ -85,10 +85,13 @@ ul, menu, dir {
     flex-direction: row;
     flex-flow: nowrap column;
     justify-content: flex-start;
-    margin:0 20px;
+    margin:0 5px;
     width: 388px;
 	overflow: hidden;
     /* height: 725px; */
+}
+#front_1 .title img,#front_2 .title img,#front_3 .title img{
+	width: 50%;
 }
 .wrap2-top{
     width: 100%;
@@ -128,8 +131,8 @@ ul, menu, dir {
 	left: 70%;
 	margin-left: -350px;
 	z-index: 999;
-	width: 770px;
-	height: 710px;
+	/* width: 770px;
+	height: 710px; */
 	background: url(../images/sec3-img.png);
 	background-size: cover;
 }
@@ -290,7 +293,7 @@ ul li{
   position: relative;
 }
 .sec4-page li{
-	opacity: 0.2;
+	opacity: 0.7;
 }
 .hehe{
 	opacity: 1 !important;
@@ -354,6 +357,8 @@ ul li{
 .sec5-code2 img{
   margin: 0 auto;
   margin-top: 40px;
+  width: 200px;
+  height: 200px;
 }
 .width-300{
     text-align: center;
@@ -673,6 +678,7 @@ p {
 	padding: 10px 0 10px 10px;
 }
 
+
 /* ---------- 轮播 ------------*/
 
 .view .swiper-container { /* height: 620px; */width: 100%; }
@@ -728,6 +734,7 @@ i{
 }
 .des-img img{
 	width: 100%;
+	height: auto;
 }
 .cul-banner-img{
 	height: 518px;
