@@ -687,7 +687,7 @@ p {
 .view .arrow-left {background: url("../images/culture/pre.png") no-repeat center; left: 10px;}
 .view .arrow-right {background: url("../images/culture/next.png") no-repeat center; right: 10px;}
 .preview { padding: 0 30px;width: 100%;margin-top: 10px;position: relative;}
-.preview .swiper-slide {margin: 0 4px;width:20%;height: 76px !important;}
+.preview .swiper-slide {margin: 0 4px;width:18%;height: 76px !important;}
 .preview .arrow{position: absolute;top: 50%;margin-top:-37px;width: 28px; height: 76px;z-index: 10;}
 .preview .arrow-left {background: url(../images/arrow-left.png) no-repeat center;left: 0px;}
 .preview .arrow-right {background: url(../images/arrow-right.png) no-repeat center;right: 0px;}
